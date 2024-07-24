@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="http://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link href="css/style2.css" rel="stylesheet" type="text/css">
+<link href="css/demo.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/iportfolio_style.css" rel="stylesheet" type="text/css">
+<link href="css/glightbox.min.css" rel="stylesheet" type="text/css">
+<link href="css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+<link href="js/boxicons/css/boxicons.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-86007008-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-86007008-1');
+</script>
+
+<script>
+	// When the user scrolls down 100px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      document.getElementById("mainNavbar").style.padding = "0px 0px";
+	  document.getElementById("mainNavbar").style.backgroundColor = "rgba(0,0,0,0.8)";
+    //document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("mainNavbar").style.padding = "25px 0px";
+	document.getElementById("mainNavbar").style.backgroundColor = "rgba(0,0,0,0)";
+    //document.getElementById("logo").style.fontSize = "35px";
+  }
+}
+</script>
+</head>
+
+<body data-spy="scroll" data-target="mainNavbar" data-offset="50">
+
+<!--Slider Slides Start-->
+<ul class="cb-slideshow" style="z-index:-100">
+  <li><span>.navImage 01</span><!--<div><h3>se·ren·i·ty</h3></div>--></li>
+  <li><span>Image 02</span><!--<div><h3>com·po·sure</h3></div>--></li>
+  <li><span>Image 03</span><!--<div><h3>e·qua·nim·i·ty</h3></div>--></li>
+  <li><span>Image 04</span><!--<div><h3>bal·ance</h3></div>--></li>
+  <li><span>Image 05</span><!--<div><h3>qui·e·tude</h3></div>--></li>
+  <li><span>Image 06</span><!--<div><h3>re·lax·a·tion</h3></div>--></li>
+  <li><span>Image 07</span><!--<div><h3>com·po·sure</h3></div>--></li>
+  <li><span>Image 08</span><!--<div><h3>e·qua·nim·i·ty</h3></div>--></li>
+  <li><span>Image 09</span><!--<div><h3>bal·ance</h3></div>--></li>
+</ul>
+<!--Slider Slides End--> 
+
+<!--Navbar Start-->
+<nav class="navbar navbar-expand-lg navbar navbar-dark navbar fixed-top" id="mainNavbar">
+  <div class="container-fluid"> <a class="navbar-brand" href="#"><img src="images/Logo_002.png" width="177" height="52" alt=""/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-end w-100">
+        <li class="nav-item"> <a class="nav-link" aria-current="page" href="#hero">Home</a></li>
+        <li class="nav-item"> <a class="nav-link" href="#about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#resume">Resume</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#portfolio">Portfolio</a> </li>
+        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Demoreel</a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#services">Reel</a></li>
+            <li><a class="dropdown-item" href="#testimonials">Breakdown</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"> <a class="nav-link " href="#contact">Contact</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--Navbar Stop--> 
+
+<!--Social Icons Start-->
+<!--
+<div class="container-fluid fixed-bottom">
+  <ul class="position pull-right">
+    <a href="https://twitter.com/lonely_woods" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a> <a href="https://www.facebook.com/sandeep.tangri" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a> <a href="https://www.instagram.com/sandeeptangri/" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a> <a href="https://www.linkedin.com/in/sandeeptangri/" class="icon-button linkedin"><i class="fa fa-linkedin"></i><span></span></a>
+  </ul>
+</div>
+-->
+<!--Social Icons End--> 
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <div class="hero-container" data-aos="fade-in">
+    <h1>Sandeep Tangri</h1>
+    <p>I'm <span class="typed" data-typed-items="3D Artist., Web Developer., Freelancer., Photographer."></span></p>
+      <!--Social Icons Start-->
+<div class="d-flex justify-content-center align-items-center">
+  <ul>
+    <a href="https://twitter.com/lonely_woods" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a> <a href="https://www.facebook.com/sandeep.tangri" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a> <a href="https://www.instagram.com/sandeeptangri/" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a> <a href="https://www.linkedin.com/in/sandeeptangri/" class="icon-button linkedin"><i class="fa fa-linkedin"></i><span></span></a>
+  </ul>
+</div>
+<!--Social Icons End--> 
+  </div>
+</section>
+<!-- End Hero -->
+
+<main id="main"> 
+  
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About</h2>
+        <p>I am a 3D  Artist with 14 years of experience. I am from india and currently working in Kuala Lumpur, Malayasia.
+        My specialization lies in Lighting,Rendering and Compositing. I have worked in cartoon Tv series and commercials.
+        I am very passionate about my work and also a supportive team player with leadership skills. I am also strong in problem solving and team management.</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right"> <img src="images/IMG-20191213-WA0000.jpg" class="img-fluid" alt=""> </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>3D Artist &amp; Developer.</h3>
+          <p class="fst-italic">&nbsp;  </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>22 March&nbsp;&nbsp;</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.sandeeptangri.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+60 175 206251</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Ludhiana, Punjab&nbsp;</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Language :</strong>Punjabi,Hindi,English <span>&nbsp;</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor in Computer Science</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sandeeptangri@gmail.com&nbsp;</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+              </ul>
+            </div>
+          </div>
+          <p>&nbsp;  </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section --> 
+  
+  <!-- ======= Facts Section =======
+    <section id="facts" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Happy Clients</strong> consequuntur quae</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong> adipisci atque cum quia aut</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hard Workers</strong> rerum asperiores dolor</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> End Facts Section --> 
+  
+  <!-- ======= Skills Section ======= -->
+  <section id="skills" class="skills section-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Skills</h2>
+        <p>I have the followig Software skills.&nbsp;</p>
+      </div>
+      <div class="row skills-content">
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="progress"> <span class="skill">Autodesk 3ds Max <i class="val">100%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="progress"> <span class="skill">Autodesk Maya <i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="progress"> <span class="skill">Adobe Photoshop <i class="val">95%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+            <div class="progress"> <span class="skill">Adobe After Effects<i class="val">80%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+            <div class="progress"> <span class="skill">fusion<i class="val">60%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+            <div class="progress"> <span class="skill">chaos V-ray<i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+            <div class="progress"> <span class="skill">Mental-Ray<i class="val">85%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+            <div class="progress"> <span class="skill">Deadline Renderfarm<i class="val">75%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="progress"> <span class="skill">HTML<i class="val">80%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="progress"> <span class="skill">Javascript<i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="progress"> <span class="skill">Dreamweaver<i class="val">65%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+            <div class="progress"> <span class="skill">CSS<i class="val">65%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+            <div class="progress"> <span class="skill">c++<i class="val">70%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Skills Section --> 
+  
+  <!-- ======= Resume Section ======= -->
+  <section id="resume" class="resume">
+    <div class="container">
+      <div class="section-title">
+        <h2>Resume</h2>
+        <p>&nbsp;</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-up">
+          <h3 class="resume-title">Sumary</h3>
+          <div class="resume-item pb-0">
+            <h4>sandeep tangri</h4>
+            <p><em>Innovative and deadline-driven 3D Artist  with 14 years of experience. designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+            <ul>
+              <li>Punjab, INDIA</li>
+              <li>+60 175 206251</li>
+              <li>sandeeptangri@gmail.com</li>
+            </ul>
+          </div>
+          <h3 class="resume-title">Education</h3>
+          <div class="resume-item">
+            <h4>diploma in animation</h4>
+            <h5>2006 - 2007</h5>
+            <p><em>Frameboxx Animation, Ludhiana, Punjab</em></p>
+            <p>Completed 1 year diploma in Animation. Worked on live 3D projects.</p>
+          </div>
+          <div class="resume-item">
+            <h4>diploma in softwares &amp; web development</h4>
+            <h5>2001 - 2003</h5>
+            <p><em>Software Solutions Integrated Ltd, Ludhian, Punjab</em></p>
+            Completed 2 years diploma from SSI Education.&nbsp;
+            <p>Gained knowledge of programming languages, web development &amp; database systems.&nbsp; &nbsp;</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="resume-title">Professional Experience</h3>
+          <div class="resume-item">
+            <h4>&nbsp;</h4>
+            <h5>2016 - Present</h5>
+            <p><em>SGK , Penang, Malayasia </em></p>
+            <ul>
+              <li>I recently worked in collaboration with a professional Branding Designer Team. The goal was to make an appealing renders of different products.&nbsp; &nbsp; .</li>
+              <li>My job was to perform the realization of 3D renders, material creation and texturing based on  designs 
+              as per the Technical drawings provided.</li>
+              <li>Stay in touch for the full showcase of this project, you will love it.</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <h4>&nbsp;</h4>
+            <h5>2015 - 2016</h5>
+            <p><em>ADI Backoffice, Chandigarh, Punjab</em></p>
+            <ul>
+              <li>Developed 3d projects in the area of Medical industry. Took part in numerous projects.</li>
+              <li>Managed up to 5 projects or tasks at a given time while under pressure.</li>
+              <li>Recommended and consulted with clients on the most appropriate 3D renders while production.&nbsp;&nbsp;</li>
+              <li>&nbsp;</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Resume Section --> 
+  
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio section-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>&nbsp;</p>
+      </div>
+      <div class="row" data-aos="fade-up">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-art">Art</li>
+            <li data-filter=".filter-animation">Animation</li>
+            <li data-filter=".filter-architecture">Architecture</li>
+            <li data-filter=".filter-freelance">Freelance</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Animation/thumb/img_001.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Animation/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Earthlings."><i class="bx bx-plus"></i></a> 
+              <!--<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Animation/thumb/img_002.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Animation/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Meri Bhains Ko Anda Kyun Mara."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Animation/thumb/img_003.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Animation/img_003.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Meri Bhains Ko Anda Kyun Mara."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Animation/thumb/img_004.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Animation/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Meri Bhains Ko Anda Kyun Mara."><i class="bx bx-plus"></i></a> 
+              <!--<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Animation/thumb/img_005.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Animation/little_krishna_hd_(big_animation) (240p).mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Little Krishna."><i class="bx bx-plus"></i></a> 
+              <!--<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Animation/thumb/img_006.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Animation/img_006.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Big Bees Junior."><i class="bx bx-plus"></i></a> 
+              <!--<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfoelio-item filter-animation">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Animation/thumb/img_007.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="https://vimeo.com/17021167" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Big Bees Junior."><i class="bx bx-plus"></i></a> 
+              <!--<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Animation/thumb/img_008.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Animation/img_008.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Freelance"><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Animation/thumb/img_009.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Animation/img_009.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Freelance"><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Animation/thumb/img_001.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Animation/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Earthlings."><i class="bx bx-plus"></i></a> 
+              <!--<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Architecture/thumb/img_001.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Architecture/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Interior Design."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Architecture/thumb/img_002.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Architecture/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Interior Design."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Architecture/thumb/img_003.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Architecture/img_003.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Interior Design."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Architecture/thumb/img_004.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Architecture/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Interior Design."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Architecture/thumb/img_005.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Architecture/img_005.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Classroom."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Architecture/thumb/img_006.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Architecture/img_006.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Exterior Visualisation."><i class="bx bx-plus"></i></a> 
+              <!--<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-art">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Art/thumb/img_001.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Art/img_001.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Buddha's Hand."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_001.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Glasses."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_002.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Alexanderia Chair."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_003.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_003.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="BMW 3D"><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_004.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Product 3D."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_005.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_005.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Lego."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_006.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_006.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D BG Modeling."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_007.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_007.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Octopus for Gaming."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_008.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_008.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Product."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_009.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_009.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Wedding Rings."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_055.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_055.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Dracula for Game."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_001.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_002.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_003.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_003.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_004.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_005.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_005.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_006.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_006.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_007.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_007.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_008.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_008.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_009.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_009.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_010.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_010.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_011.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_011.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_012.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_012.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_013.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_013.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_014.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_014.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Portfolio Section --> 
+  
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Reel</h2>
+          <div class="row">
+            <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/17153265?h=e9c4bdcda7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Maya Lighting Demoreel"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+      <!--<div class="row">
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+          <div class="icon"><i class="bi bi-briefcase"></i></div>
+          <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon"><i class="bi bi-card-checklist"></i></div>
+          <h4 class="title"><a href="">Dolor Sitema</a></h4>
+          <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon"><i class="bi bi-bar-chart"></i></div>
+          <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+          <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon"><i class="bi bi-binoculars"></i></div>
+          <h4 class="title"><a href="">Magni Dolores</a></h4>
+          <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon"><i class="bi bi-brightness-high"></i></div>
+          <h4 class="title"><a href="">Nemo Enim</a></h4>
+          <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+          <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+          <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+          <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+        </div>
+      </div>-->
+    </div>
+  </section>
+      <!--End Services Section--> 
+  
+      <!--Testimonials Section-->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Breakdown</h2>
+        <div style="padding:56.25% 0 0 0;position:relative; padding-bottom: 100px;"><iframe src="https://player.vimeo.com/video/174074282?h=bfc863f9ac&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Sundial Shot Compositing."></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/174074357?h=05d4d70d45&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Eleven Second Shot Compositing."></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
+        </div>
+
+        <!--<div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div>
+              <!--End testimonial item-->
+
+            <!--<div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div>-->
+              
+              <!--End testimonial item-->
+
+            <!--<div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div>-->
+              
+              <!--End testimonial item-->
+
+            <!--<div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div>-->
+              
+              <!--End testimonial item-->
+
+            <!--<div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div>-->
+              <!--End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>-->
+
+      </div>
+    </section><!-- End Testimonials Section --> 
+  
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Please use this contact form or send me an email</p>
+      </div>
+      <div class="row" data-aos="fade-in">
+        <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="info">
+            <div class="address"> <i class="bi bi-geo-alt"></i>
+              <h4>Location:</h4>
+              <p>Kuala Lumpur, MALAYASIA</p>
+            </div>
+            <div class="email"> <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>sandeeptangri@gmail.com </p>
+            </div>
+            <div class="phone"> <i class="bi bi-phone"></i>
+              <h4>Call:</h4>
+              <p>+60 175 206251</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127482.66722782142!2d101.6169493970083!3d3.138674969062989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49c701efeae7%3A0xf4d98e5b2f1c287d!2sKuala%20Lumpur%2C%20Federal%20Territory%20of%20Kuala%20Lumpur%2C%20Malaysia!5e0!3m2!1sen!2sin!4v1657446358736!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+<!--            <iframe src="images/Slider/sandeepqrnew.png" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>-->
+
+          </div>
+        </div>
+        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" class="form-control" id="name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Your Email</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">Subject</label>
+              <input type="text" class="form-control" name="subject" id="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Message</label>
+              <textarea class="form-control" name="message" rows="10" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section --> 
+  
+</main>
+
+<!-- Vendor JS Files --> 
+<script type="text/javascript" src="js/purecounter/purecounter.js"></script> 
+<!--  <script type="text/javascript" src="js/type/typed.min.js"></script>--> 
+<script type="text/javascript" src="js/waypoints/noframework.waypoints.js"></script> 
+<script type="text/javascript" src="js/php-email-form/validate.js"></script> 
+<script type="text/javascript" src="js/glightbox/js/glightbox.min.js"></script> 
+<script type="text/javascript" src="js/typed.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
+<!--<script type="text/javascript" src="js/typed.min.js"></script>--> 
+<script type="text/javascript" src="js/main.js"></script> 
+<script type="text/javascript" src="js/aos.js"></script> 
+<script type="text/javascript" src="js/modernizr.custom.86080.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script type="text/javascript" src="js/isotope-layout/isotope.pkgd.min.js"></script> 
+<script type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
