@@ -3,9 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link href="css/style2.css" rel="stylesheet" type="text/css">
 <link href="css/demo.css" rel="stylesheet" type="text/css">
@@ -32,16 +30,25 @@ function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
       document.getElementById("mainNavbar").style.padding = "0px 0px";
 	  document.getElementById("mainNavbar").style.backgroundColor = "rgba(0,0,0,0.8)";
-    //document.getElementById("logo").style.fontSize = "25px";
     document.querySelector('.cb-slideshow').style.filter = 'blur(8px)';
+    //document.getElementById("logo").style.fontSize = "25px";
   } else {
     document.getElementById("mainNavbar").style.padding = "25px 0px";
 	document.getElementById("mainNavbar").style.backgroundColor = "rgba(0,0,0,0)";
+  document.querySelector('.cb-slideshow').style.filter = 'blur(0px)';
     //document.getElementById("logo").style.fontSize = "35px";
-    document.querySelector('.cb-slideshow').style.filter = 'blur(0px)';
   }
 }
 </script>
+
+<style>
+  @media (max-width: 767px) {
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl  {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    </style>
+
 </head>
 
 <body data-spy="scroll" data-target="mainNavbar" data-offset="50">
