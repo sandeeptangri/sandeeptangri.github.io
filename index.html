@@ -19,6 +19,13 @@
 <link href="css/glightbox.min.css" rel="stylesheet" type="text/css">
 <link href="css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
 <link href="js/boxicons/css/boxicons.min.css" rel="stylesheet" type="text/css">
+		   <!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86007008-1"></script>
@@ -48,6 +55,8 @@ function scrollFunction() {
 }
 </script>
 
+   
+
 <style>
   @media (max-width: 767px) {
     .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl  {
@@ -76,7 +85,7 @@ function scrollFunction() {
 
 <!--Navbar Start-->
 <nav class="navbar navbar-expand-lg navbar navbar-dark navbar fixed-top" id="mainNavbar">
-  <div class="container-fluid"> <a class="navbar-brand" href="#"><img src="images/Logo_002.png" width="177" height="52" alt=""/></a>
+  <div class="container-fluid" style="font-size: 20px"> <a class="navbar-brand" href="#"><img src="images/Logo_002.png" width="177" height="52" alt=""/></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-end w-100">
@@ -856,34 +865,99 @@ function scrollFunction() {
           </div>
         </div>
         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-            <div class="row">
-              <div class="form-group col-md-6">
+<!-- Your form here -->
+    <form id="contact-form" action="https://formspree.io/f/mvgpjgrd" method="POST" role="form" class="php-email-form">
+        <div class="row">
+            <div class="form-group col-md-6">
                 <label for="name">Your Name</label>
                 <input type="text" name="name" class="form-control" id="name" required>
-              </div>
-              <div class="form-group col-md-6">
-                <label for="name">Your Email</label>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Your Email</label>
                 <input type="email" class="form-control" name="email" id="email" required>
-              </div>
             </div>
-            <div class="form-group">
-              <label for="name">Subject</label>
-              <input type="text" class="form-control" name="subject" id="subject" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" name="subject" id="subject" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" name="message" rows="10" required></textarea>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+    </form>
+
+   <!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Success</h5>
+                <!-- Removed close button -->
             </div>
-            <div class="form-group">
-              <label for="name">Message</label>
-              <textarea class="form-control" name="message" rows="10" required></textarea>
+            <div class="modal-body">
+                Your message has been sent. Thank you!
             </div>
-            <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
+            <!-- Removed footer -->
+        </div>
+    </div>
+</div>
+
+
+   <!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="errorModalLabel">Error</h5>
+                <!-- Removed close button -->
             </div>
-            <div class="text-center">
-              <button type="submit">Send Message</button>
+            <div class="modal-body">
+                There was an error sending your message. Please try again.
             </div>
-          </form>
+            <!-- Removed footer -->
+        </div>
+    </div>
+</div>
+
+<!-- Your custom JavaScript -->
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    
+    var form = event.target;
+    
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(function(response) {
+        if (response.ok) {
+            $('#successModal').modal('show'); // Show success modal
+            setTimeout(function() {
+                $('#successModal').modal('hide'); // Hide modal after 2 seconds
+            }, 2000);
+            form.reset();
+        } else {
+            $('#errorModal').modal('show'); // Show error modal
+            setTimeout(function() {
+                $('#errorModal').modal('hide'); // Hide modal after 2 seconds
+            }, 2000);
+        }
+    }).catch(function(error) {
+        $('#errorModal').modal('show'); // Show error modal
+        setTimeout(function() {
+            $('#errorModal').modal('hide'); // Hide modal after 2 seconds
+        }, 2000);
+        console.error('Form submission failed:', error);
+    });
+});
+</script>
         </div>
       </div>
     </div>
