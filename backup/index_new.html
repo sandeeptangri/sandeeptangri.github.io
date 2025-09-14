@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@200..700&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;500&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     
     <!-- Core CSS -->
@@ -28,118 +28,6 @@
     
     <!-- Plugin CSS -->
     <link href="css/glightbox.min.css" rel="stylesheet">
-    <style>
-      /* Custom Lightbox Styles */
-      .gslide-media {
-        border-radius: 8px 8px 0 0 !important;
-        overflow: hidden;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-        margin-bottom: 0 !important;
-      }
-      .gslide-title {
-        display: none !important;
-      }
-      .gslide-desc {
-        color: rgba(255, 255, 255, 0.9) !important;
-        font-size: 1rem !important;
-        line-height: 1.4 !important;
-        font-family: 'Poppins', 'Open Sans', 'Roboto', sans-serif !important;
-        font-weight: 500 !important;
-        letter-spacing: 0.1px;
-        margin: 0.1rem auto 0 !important;
-        padding: 0 1.5rem !important;
-        text-align: center !important;
-        max-width: 800px !important;
-      }
-      .gslide-description {
-        background: rgba(26, 26, 26, 0.98) !important;
-        padding: 0.75rem 2rem 1.25rem !important;
-        border-radius: 0 0 8px 8px;
-      }
-      .glightbox-container {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-      }
-      .gslide-video {
-        width: 60vw !important;
-        height: 60vh !important;
-        margin: 0 auto !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-      }
-      .glightbox-container .gslide-media {
-        width: 100% !important;
-        height: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-      }
-      .glightbox-container .gslide-media video {
-        width: 100% !important;
-        height: 100% !important;
-        max-width: 100% !important;
-        max-height: 100% !important;
-        object-fit: contain !important;
-      }
-      .glightbox-clean .gdesc-inner {
-        padding: 10px 15px !important;
-      }
-      .gslide-title, .gslide-desc {
-        color: #ffffff !important;
-      }
-      .gslide-image img {
-        max-height: 80vh;
-        width: auto !important;
-        max-width: 90vw;
-        margin: 0 auto;
-        display: block;
-      }
-      .gslide-current .gslide-media {
-        border: 2px solid #a78bfa;
-      }
-      .gprev, .gnext {
-        width: 50px !important;
-        height: 50px !important;
-        background: rgba(167, 139, 250, 0.9) !important;
-        border-radius: 50% !important;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease !important;
-      }
-      .gprev:hover, .gnext:hover {
-        background: #6c63ff !important;
-        transform: scale(1.1);
-      }
-      .gprev::before, .gnext::before {
-        color: #0d0d0d;
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-      .gclose {
-        top: 10px !important;
-        right: 10px !important;
-        width: 40px !important;
-        height: 40px !important;
-        background: rgba(26, 26, 26, 0.9) !important;
-        border-radius: 50% !important;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease !important;
-      }
-      .gclose:hover {
-        background: #a78bfa !important;
-        transform: rotate(90deg);
-      }
-      .gclose svg {
-        width: 20px;
-        height: 20px;
-        color: #fff;
-      }
-    </style>
     <link href="css/swiper-bundle.min.css" rel="stylesheet">
     <link href="js/boxicons/css/boxicons.min.css" rel="stylesheet">
 		   <!-- Bootstrap 5.2.0 JS Bundle with Popper -->
@@ -186,11 +74,11 @@ window.addEventListener('scroll', function() {
     navbar.style.backdropFilter = `blur(${10 * scrollRatio}px)`;
     navbar.style.webkitBackdropFilter = `blur(${10 * scrollRatio}px)`;
   } else {
-    // At top of page - fully transparent navbar with 1px blur
+    // At top of page - fully transparent navbar
     navbar.style.padding = "25px 0";
     navbar.style.backgroundColor = "rgba(0,0,0,0)";
-    navbar.style.backdropFilter = "blur(1px)";
-    navbar.style.webkitBackdropFilter = "blur(1px)";
+    navbar.style.backdropFilter = "none";
+    navbar.style.webkitBackdropFilter = "none";
   }
   
   // Update active nav link based on scroll position
@@ -241,52 +129,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
-
-// Progress Bar Animation
-const progressBars = document.querySelectorAll('.skill-progress');
-progressBars.forEach((bar, index) => {
-  const targetWidth = bar.parentNode.querySelector('span').textContent;
-  bar.style.setProperty('--target-width', `${targetWidth}%`);
-  setTimeout(() => {
-    bar.classList.add('animate');
-  }, index * 200);
-});
 </script>
 
-   <style>
-    /* Progress Bar Animation */
-    .skill-progress {
-      width: 0;
-      transition: width 1.5s ease-out;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .skill-progress.animate {
-      width: var(--target-width);
-    }
-    
-    .skill-progress::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(90deg, 
-        rgba(255,255,255,0) 0%, 
-        rgba(255,255,255,0.3) 50%, 
-        rgba(255,255,255,0) 100%);
-      animation: shine 2s infinite;
-      opacity: 0.5;
-    }
-    
-    @keyframes shine {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-    
-    /* Navigation Link Styles */
+   
+
+<style>
+  /* Navigation Link Styles */
   .nav-link {
     color: rgba(255, 255, 255, 0.9) !important;
     padding: 0.5rem 1rem !important;
@@ -369,82 +217,6 @@ progressBars.forEach((bar, index) => {
   }
   
   @media (max-width: 991.98px) {
-    /* Mobile menu styles */
-    .navbar-collapse {
-      position: fixed;
-      top: 70px;
-      left: 15px;
-      right: 15px;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 1.5rem !important;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      z-index: 1000;
-      max-height: calc(100vh - 100px);
-      overflow-y: auto;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: all 0.3s ease-in-out;
-      pointer-events: none;
-    }
-    
-    .navbar-collapse.show {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
-    
-    .navbar-nav {
-      padding: 0;
-    }
-    
-    .nav-item {
-      margin: 0.5rem 0;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: all 0.3s ease;
-    }
-    
-    .navbar-collapse.show .nav-item {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .nav-item:nth-child(1) { transition-delay: 0.1s; }
-    .nav-item:nth-child(2) { transition-delay: 0.15s; }
-    .nav-item:nth-child(3) { transition-delay: 0.2s; }
-    .nav-item:nth-child(4) { transition-delay: 0.25s; }
-    .nav-item:nth-child(5) { transition-delay: 0.3s; }
-    .nav-item:nth-child(6) { transition-delay: 0.35s; }
-    
-    .nav-link {
-      padding: 12px 20px !important;
-      border-radius: 8px;
-      transition: all 0.3s ease !important;
-      font-size: 1.1rem !important;
-      color: #e0e0e0 !important;
-      display: flex;
-      align-items: center;
-      margin: 0 !important;
-    }
-    
-    .nav-link i {
-      margin-right: 12px;
-      font-size: 1.2rem;
-      width: 24px;
-      text-align: center;
-    }
-    
-    .nav-link:hover, 
-    .nav-link:focus, 
-    .nav-link.active {
-      background: rgba(167, 139, 250, 0.15) !important;
-      color: #a78bfa !important;
-      transform: translateX(5px) !important;
-    }
-    
     /* Medium devices (tablets, less than 992px) */
     .section-title h2 {
       font-size: 2.2rem !important;
@@ -463,47 +235,10 @@ progressBars.forEach((bar, index) => {
   }
   
   @media (max-width: 767.98px) {
-    /* Adjust navbar for mobile */
-    .navbar {
-      padding: 12px 0 !important;
-    }
-    
-    .navbar-toggler {
-      padding: 0.4rem 0.75rem !important;
-      font-size: 1.1rem;
-      border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    }
-    
-    .navbar-toggler:focus {
-      box-shadow: 0 0 0 0.25rem rgba(167, 139, 250, 0.25) !important;
-    }
-    
-    .navbar-collapse {
-      top: 65px;
-      left: 10px;
-      right: 10px;
-      max-height: calc(100vh - 80px);
-    }
-    
     /* Small devices (landscape phones, less than 768px) */
     .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    
-    /* About section mobile adjustments */
-    #about .content {
-      padding: 0 0.5rem !important;
-    }
-    
-    #about h3 {
-      font-size: 1.75rem !important;
-      margin-bottom: 1.25rem !important;
-    }
-    
-    #about p {
-      font-size: 1rem !important;
-      line-height: 1.6 !important;
+      padding-left: 15px;
+      padding-right: 15px;
     }
     
     /* Adjust navbar */
@@ -613,9 +348,9 @@ progressBars.forEach((bar, index) => {
 <!--Slider Slides End--> 
 
 <!--Navbar Start-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar" style="padding: 15px 0; background-color: rgba(0, 0, 0, 0); transition: all 0.3s ease;">
-  <div class="container-fluid" style="font-size: 20px; position: relative;">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); z-index: 1050; padding: 0.5rem 0.75rem; border: 1px solid rgba(255, 255, 255, 0.1);">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar" style="padding: 25px 0; background-color: rgba(0, 0, 0, 0); transition: all 0.3s ease;">
+  <div class="container-fluid d-flex justify-content-center" style="font-size: 20px">
+    <button class="navbar-toggler position-absolute d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="left: 1rem;">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -649,22 +384,6 @@ progressBars.forEach((bar, index) => {
   var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
   var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
     return new bootstrap.Dropdown(dropdownToggleEl);
-  });
-
-  // Close mobile menu when a nav link is clicked
-  document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-link');
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth < 992) { // Only for mobile
-          bsCollapse.hide();
-        }
-      });
-    });
   });
 </script>
 <!--Navbar Stop--> 
@@ -706,20 +425,17 @@ progressBars.forEach((bar, index) => {
         </div>
         
         <!-- Social Icons -->
-        <div class="social-links d-flex justify-content-center gap-3 mt-4" style="position: relative; z-index: 2;">
-          <a href="https://www.flickr.com/photos/sandeeptangri/" class="social-icon" target="_blank" style="width: 50px; height: 50px; border-radius: 50%; background: rgba(26, 26, 26, 0.7); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; transition: all 0.3s ease; position: relative; z-index: 2;" onmouseover="this.style.background='#ff0084'; this.style.color='#fff'" onmouseout="this.style.background='rgba(26, 26, 26, 0.7)'; this.style.color='#fff'">
-            <i class="bx bxl-flickr"></i>
-          </a>
-          <a href="https://twitter.com/lonely_woods" class="social-icon" target="_blank" style="width: 50px; height: 50px; border-radius: 50%; background: rgba(26, 26, 26, 0.7); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; transition: all 0.3s ease; position: relative; z-index: 2;" onmouseover="this.style.background='#1DA1F2'; this.style.color='#fff'" onmouseout="this.style.background='rgba(26, 26, 26, 0.7)'; this.style.color='#fff'">
+        <div class="social-links d-flex justify-content-center gap-3 mt-4">
+          <a href="https://twitter.com/lonely_woods" class="social-icon" target="_blank" style="width: 50px; height: 50px; border-radius: 50%; background: transparent; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; transition: all 0.3s ease;">
             <i class="bx bxl-twitter"></i>
           </a>
-          <a href="https://www.facebook.com/sandeep.tangri" class="social-icon" target="_blank" style="width: 50px; height: 50px; border-radius: 50%; background: rgba(26, 26, 26, 0.7); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; transition: all 0.3s ease; position: relative; z-index: 2;" onmouseover="this.style.background='#1877F2'; this.style.color='#fff'" onmouseout="this.style.background='rgba(26, 26, 26, 0.7)'; this.style.color='#fff'">
+          <a href="https://www.facebook.com/sandeep.tangri" class="social-icon" target="_blank" style="width: 50px; height: 50px; border-radius: 50%; background: transparent; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; transition: all 0.3s ease;">
             <i class="bx bxl-facebook"></i>
           </a>
-          <a href="https://www.instagram.com/sandeeptangri/" class="social-icon instagram-icon" target="_blank" style="width: 50px; height: 50px; border-radius: 50%; background: rgba(26, 26, 26, 0.7); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; transition: all 0.3s ease; position: relative; z-index: 2;" onmouseover="this.style.background='linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D)'; this.style.color='#fff'" onmouseout="this.style.background='rgba(26, 26, 26, 0.7)'; this.style.color='#fff'">
+          <a href="https://www.instagram.com/sandeeptangri/" class="social-icon instagram-icon" target="_blank" style="width: 50px; height: 50px; border-radius: 50%; background: transparent; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; transition: all 0.3s ease;">
             <i class="bx bxl-instagram"></i>
           </a>
-          <a href="https://www.linkedin.com/in/sandeeptangri/" class="social-icon" target="_blank" style="width: 50px; height: 50px; border-radius: 50%; background: rgba(26, 26, 26, 0.7); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; transition: all 0.3s ease; position: relative; z-index: 2;" onmouseover="this.style.background='#0A66C2'; this.style.color='#fff'" onmouseout="this.style.background='rgba(26, 26, 26, 0.7)'; this.style.color='#fff'">
+          <a href="https://www.linkedin.com/in/sandeeptangri/" class="social-icon" target="_blank" style="width: 50px; height: 50px; border-radius: 50%; background: transparent; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; transition: all 0.3s ease;">
             <i class="bx bxl-linkedin"></i>
           </a>
         </div>
@@ -760,7 +476,6 @@ progressBars.forEach((bar, index) => {
   opacity: 1;
 }
 
-.social-icon[href*="flickr"]:hover { background-color: #ff0084 !important; }
 .social-icon[href*="twitter"]:hover { background-color: #1DA1F2 !important; }
 .social-icon[href*="facebook"]:hover { background-color: #1877F2 !important; }
 .social-icon[href*="instagram"]:hover { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D) !important; }
@@ -791,20 +506,20 @@ progressBars.forEach((bar, index) => {
 <main id="main"> 
   
   <!-- ======= About Section ======= -->
-  <section id="about" class="about" style="background-color: #0d0d0d; color: #e0e0e0; padding: 5rem 0 6rem;">
+  <section id="about" class="about" style="background-color: #0d0d0d; color: #e0e0e0; padding: 5rem 0;">
     <div class="container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative;">
       <!-- Background Card -->
       <div style="position: absolute; top: 4rem; left: 1rem; right: 1rem; bottom: 1rem; background: #1a1a1a; border-radius: 16px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); z-index: 0;"></div>
       
-      <div class="section-title" style="margin-bottom: 3rem; padding: 0 1rem; position: relative; z-index: 1;">
+      <div class="section-title" style="margin-bottom: 2.5rem; position: relative; z-index: 1;">
         <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem; color: #a78bfa; position: relative; display: inline-block; padding-bottom: 10px;">
           About Me
           <span style="position: absolute; bottom: 0; left: 0; width: 60px; height: 3px; background: linear-gradient(90deg, #a78bfa, #6c63ff);"></span>
         </h2>
       </div>
       
-      <div class="row" style="align-items: flex-start; margin-bottom: 2rem; position: relative; z-index: 1; padding: 0 1rem;">
-        <div class="col-lg-5" data-aos="fade-right" style="margin-bottom: 2.5rem;">
+      <div class="row" style="align-items: flex-start; margin-bottom: 4rem; position: relative; z-index: 1;">
+        <div class="col-lg-5" data-aos="fade-right" style="margin-bottom: 2rem;">
           <div style="width: 100%; max-width: 350px; margin: 0 auto; position: relative;">
             <div style="width: 100%; padding-bottom: 100%; position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
               <img src="images/IMG-20191213-WA0000.jpg" alt="Sandeep Tangri" style="position: absolute; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
@@ -812,7 +527,7 @@ progressBars.forEach((bar, index) => {
           </div>
         </div>
         
-        <div class="col-lg-7 pt-3 pt-lg-0 content" data-aos="fade-left" style="padding: 0 2.5rem 2rem;">
+        <div class="col-lg-7 pt-3 pt-lg-0 content" data-aos="fade-left" style="padding-left: 2.5rem;">
           <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; color: #ffffff; line-height: 1.3;">
             Professional <span style="color: #a78bfa;">3D Artist</span> & <span style="color: #a78bfa;">Digital Creator</span>
           </h3>
@@ -842,27 +557,27 @@ progressBars.forEach((bar, index) => {
             </div>
           </div>
           
-          <div class="mt-5" style="margin-top: 3rem; padding: 0 1rem 2rem;">
-            <div class="d-flex flex-wrap gap-3">
-              <a href="#contact" class="btn btn-primary flex-grow-1 text-center" style="background: linear-gradient(45deg, #6c63ff, #8a85ff); border: none; padding: 12px 20px; border-radius: 30px; color: white; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3); min-width: 140px;">
-                <i class="bx bx-paper-plane me-2"></i> Hire Me
-              </a>
-              <a href="https://www.linkedin.com/in/sandeeptangri/" target="_blank" class="btn btn-outline-primary flex-grow-1 text-center" style="border: 2px solid #6c63ff; color: #6c63ff; background: transparent; padding: 10px 20px; border-radius: 30px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; min-width: 140px;" onmouseover="this.style.background='#6c63ff'; this.style.color='#fff'" onmouseout="this.style.background='transparent'; this.style.color='#6c63ff'">
-                <i class='bx bxs-file-doc me-2' style="position: relative; top: 1px;"></i> View Resume
-              </a>
-            </div>
+          <div class="mt-4" style="margin-top: 2rem;">
+            <a href="#contact" class="btn btn-primary me-3" style="background: linear-gradient(45deg, #6c63ff, #8a85ff); border: none; padding: 12px 30px; border-radius: 30px; color: white; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);">
+              <i class="bx bx-paper-plane me-2"></i> Hire Me
+            </a>
+            <a href="#" class="btn btn-outline-primary" style="border: 2px solid #6c63ff; color: #6c63ff; background: transparent; padding: 10px 25px; border-radius: 30px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; margin-left: 10px;">
+              <i class="bx bx-download me-2"></i> Download CV
+            </a>
           </div>
         </div>
       </div>
       
       <!-- Core Expertise & Software Skills -->
-      <div id="skills" class="row mt-5" style="margin: 4rem 0 6rem; padding: 0 1.5rem 3rem; position: relative; z-index: 2;">
+      <div class="row mt-5" style="margin-top: 4rem; position: relative; z-index: 2;">
         <div class="col-12 mb-5">
-          <div style="margin-bottom: 2.5rem; padding: 0 1rem 2rem; text-align: center;">
-            <h3 class="mb-4" style="font-size: 2rem; font-weight: 700; color: #ffffff; display: inline-block;">
-              <span style="color: #a78bfa;">Core Expertise</span> & Software Skills
-            </h3>
-          </div>
+          <h3 class="mb-4" style="font-size: 2rem; font-weight: 700; color: #ffffff;">
+            <span style="color: #a78bfa;">Core Expertise</span> & Software Skills
+          </h3>
+          <p style="color: #9ca3af; margin-bottom: 2.5rem; font-size: 1.1rem; line-height: 1.7;">
+            A blend of technical mastery and creative intuition, driving impactful visual experiences across diverse platforms.
+          </p>
+          
           <!-- 3D & Creative Suites -->
           <h4 style="font-size: 1.3rem; font-weight: 600; color: #ffffff; margin: 2.5rem 0 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid #2d2d2d;">
             3D & Creative Suites
@@ -873,8 +588,8 @@ progressBars.forEach((bar, index) => {
                 <span style="color: #e0e0e0; font-weight: 500;">Autodesk 3ds Max</span>
                 <span style="color: #a78bfa; font-weight: 600;">100%</span>
               </div>
-              <div style="height: 8px; background: #2d2d2d; border-radius: 4px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);">
-                <div class="skill-progress" style="width: 0; height: 100%; background: linear-gradient(90deg, #a78bfa, #6c63ff);"></div>
+              <div style="height: 8px; background: #2d2d2d; border-radius: 4px; overflow: hidden;">
+                <div style="width: 100%; height: 100%; background: linear-gradient(90deg, #a78bfa, #6c63ff);"></div>
               </div>
             </div>
             
@@ -915,26 +630,6 @@ progressBars.forEach((bar, index) => {
               </div>
               <div style="height: 8px; background: #2d2d2d; border-radius: 4px; overflow: hidden;">
                 <div style="width: 60%; height: 100%; background: linear-gradient(90deg, #a78bfa, #6c63ff);"></div>
-              </div>
-            </div>
-            
-            <div class="col-md-6 mb-4">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <span style="color: #e0e0e0; font-weight: 500;">Nuke</span>
-                <span style="color: #a78bfa; font-weight: 600;">50%</span>
-              </div>
-              <div style="height: 8px; background: #2d2d2d; border-radius: 4px; overflow: hidden;">
-                <div style="width: 50%; height: 100%; background: linear-gradient(90deg, #a78bfa, #6c63ff);"></div>
-              </div>
-            </div>
-            
-            <div class="col-md-6 mb-4">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <span style="color: #e0e0e0; font-weight: 500;">Blender</span>
-                <span style="color: #a78bfa; font-weight: 600;">50%</span>
-              </div>
-              <div style="height: 8px; background: #2d2d2d; border-radius: 4px; overflow: hidden;">
-                <div style="width: 50%; height: 100%; background: linear-gradient(90deg, #a78bfa, #6c63ff);"></div>
               </div>
             </div>
             
@@ -1090,9 +785,7 @@ progressBars.forEach((bar, index) => {
       </div>
     </div>
   </section>
-  <!-- End About Section -->
-  
-  <div style="border-top: 1px solid #2d2d2d; margin: 0;"></div> 
+  <!-- End About Section --> 
   
   <!-- ======= Resume Section ======= -->
   <section id="resume" class="resume" style="background-color: #0d0d0d; color: #e0e0e0; padding: 5rem 0;">
@@ -1111,9 +804,16 @@ progressBars.forEach((bar, index) => {
               <span style="position: absolute; left: 0; bottom: 0; width: 50px; height: 3px; background-color: #a78bfa;"></span>
             </h3>
             <div style="margin-bottom: 1.5rem;">
-              <p style="font-style: italic; color: #d1d5db; margin-bottom: 0; line-height: 1.6;">
+              <h4 style="font-size: 1.25rem; font-weight: 600; color: #ffffff; margin-bottom: 0.5rem;">Sandeep Tangri</h4>
+              <p style="font-style: italic; color: #d1d5db; margin-bottom: 1rem; line-height: 1.6;">
                 Innovative and deadline-driven 3D Artist with 14 years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.
               </p>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 0; color: #d1d5db; display: flex; align-items: center;">
+                  <i class='bx bxs-envelope' style="color: #a78bfa; margin-right: 0.75rem; font-size: 1.25rem;"></i>
+                  <span>sandeeptangri@gmail.com</span>
+                </li>
+              </ul>
             </div>
           </div>
           
@@ -1128,7 +828,7 @@ progressBars.forEach((bar, index) => {
                 <span style="color: #a78bfa; font-size: 0.875rem; font-weight: 500;">2024 - 2025</span>
               </div>
               <p style="color: #a78bfa; margin-bottom: 0.75rem; font-style: normal;">
-                <i class='bx bxs-graduation' style="margin-right: 0.5rem;"></i>AAFT University (Online), Noida, India
+                <i class='bx bxs-graduation' style="margin-right: 0.5rem;"></i>AAFT University (Online), NOIDA, INDIA
               </p>
               <p style="color: #d1d5db; line-height: 1.6; margin-bottom: 2.5rem;">
                 Specialized in interior design principles, space planning, and 3D visualization techniques through this comprehensive online diploma program.
@@ -1171,7 +871,7 @@ progressBars.forEach((bar, index) => {
             </h3>
             
             <div style="margin-bottom: 2rem; position: relative; padding-left: 1.75rem; border-left: 2px solid #a78bfa;">
-              <h4 style="font-size: 1.25rem; font-weight: 600; color: #ffffff; margin-bottom: 0.5rem;">Senior  3D Artist</h4>
+              <h4 style="font-size: 1.25rem; font-weight: 600; color: #ffffff; margin-bottom: 0.5rem;">3D Artist</h4>
               <div style="background-color: rgba(167, 139, 250, 0.1); display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; margin-bottom: 0.75rem;">
                 <span style="color: #a78bfa; font-size: 0.875rem; font-weight: 500;">2016 - 2025</span>
               </div>
@@ -1217,38 +917,12 @@ progressBars.forEach((bar, index) => {
                 </li>
               </ul>
             </div>
-            
-            <div style="position: relative; padding-left: 1.75rem; border-left: 2px solid #a78bfa; margin-top: 2rem;">
-              <h4 style="font-size: 1.25rem; font-weight: 600; color: #ffffff; margin-bottom: 0.5rem;">3D Artist</h4>
-              <div style="background-color: rgba(167, 139, 250, 0.1); display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; margin-bottom: 0.75rem;">
-                <span style="color: #a78bfa; font-size: 0.875rem; font-weight: 500;">2012 - 2015</span>
-              </div>
-              <p style="color: #a78bfa; margin-bottom: 0.75rem; font-style: normal;">
-                <i class='bx bxs-building' style="margin-right: 0.5rem;"></i>Bose International Planning & Architecture, New Delhi, India
-              </p>
-              <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="margin-bottom: 0.5rem; color: #d1d5db; display: flex; align-items: flex-start;">
-                  <i class='bx bxs-check-circle' style="color: #a78bfa; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
-                  <span>Held responsibility for crafting all architectural visualizations across diverse projects, translating design concepts into compelling visual representations.</span>
-                </li>
-                <li style="margin-bottom: 0.5rem; color: #d1d5db; display: flex; align-items: flex-start;">
-                  <i class='bx bxs-check-circle' style="color: #a78bfa; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
-                  <span>Utilized advanced rendering techniques and attention to detail to ensure visualizations accurately reflected project visions and met high-quality standards.</span>
-                </li>
-                <li style="margin-bottom: 0; color: #d1d5db; display: flex; align-items: flex-start;">
-                  <i class='bx bxs-check-circle' style="color: #a78bfa; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
-                  <span>Collaborated with architects and designers to create photorealistic 3D models and renderings for client presentations and project approvals.</span>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End Resume Section -->
-  
-  <div style="border-top: 1px solid #2d2d2d; margin: 0;"></div> 
+  <!-- End Resume Section --> 
   
   <!-- ======= Portfolio Section ======= -->
   <section id="portfolio" class="portfolio section-bg" style="background-color: #0d0d0d; color: #e0e0e0; padding: 5rem 0;">
@@ -1387,13 +1061,13 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
             <img src="images/portfolio/Animation/thumb/img_001.jpg" class="img-fluid" alt="Earthlings - Animated Short Film" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Animation/img_001.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="images/portfolio/Animation/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Earthlings" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); padding: 12px 10px; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80px;">
               <h4 style="margin: 0; font-size: 1rem; color: #fff; text-align: center; width: 100%;">Earthlings</h4>
-              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #9ca3af; text-align: center; width: 100%;">Animation</p>
+              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #a78bfa; text-align: center; width: 100%;">Animation</p>
             </div>
             <span class="portfolio-date" style="display: none;">2023-01-01</span>
           </div>
@@ -1402,13 +1076,13 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
             <img src="images/portfolio/Animation/thumb/img_002.jpg" class="img-fluid" alt="Meri Bhains Ko Anda Kyun Mara - Character Animation" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Animation/img_002.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="images/portfolio/Animation/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Meri Bhains Ko Anda Kyun Mara" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); padding: 12px 10px; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80px;">
               <h4 style="margin: 0; font-size: 1rem; color: #fff; text-align: center; width: 100%;">Meri Bhains Ko Anda Kyun Mara</h4>
-              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #9ca3af; text-align: center; width: 100%;">Animation</p>
+              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #a78bfa; text-align: center; width: 100%;">Animation</p>
             </div>
             <span class="portfolio-date" style="display: none;">2023-02-15</span>
           </div>
@@ -1417,13 +1091,13 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
             <img src="images/portfolio/Animation/thumb/img_003.jpg" class="img-fluid" alt="Meri Bhains Ko Anda Kyun Mara - Character Animation" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Animation/img_003.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="images/portfolio/Animation/img_003.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Meri Bhains Ko Anda Kyun Mara" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); padding: 12px 10px; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80px;">
               <h4 style="margin: 0; font-size: 1rem; color: #fff; text-align: center; width: 100%;">Meri Bhains Ko Anda Kyun Mara</h4>
-              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #9ca3af; text-align: center; width: 100%;">Animation</p>
+              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #a78bfa; text-align: center; width: 100%;">Animation</p>
             </div>
             <span class="portfolio-date" style="display: none;">2023-03-10</span>
           </div>
@@ -1432,13 +1106,13 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
             <img src="images/portfolio/Animation/thumb/img_004.jpg" class="img-fluid" alt="Meri Bhains Ko Anda Kyun Mara - Character Animation" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Animation/img_004.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="images/portfolio/Animation/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Meri Bhains Ko Anda Kyun Mara" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); padding: 12px 10px; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80px;">
               <h4 style="margin: 0; font-size: 1rem; color: #fff; text-align: center; width: 100%;">Meri Bhains Ko Anda Kyun Mara</h4>
-              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #9ca3af; text-align: center; width: 100%;">Animation</p>
+              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #a78bfa; text-align: center; width: 100%;">Animation</p>
             </div>
             <span class="portfolio-date" style="display: none;">2023-04-05</span>
           </div>
@@ -1447,13 +1121,13 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
             <img src="images/portfolio/Animation/thumb/img_005.jpg" class="img-fluid" alt="Little Krishna - Animated Short" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Animation/little_krishna_hd_(big_animation) (240p).mp4" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="images/portfolio/Animation/little_krishna_hd_(big_animation) (240p).mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Little Krishna" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
                 <i class="bx bx-play"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); padding: 12px 10px; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80px;">
               <h4 style="margin: 0; font-size: 1rem; color: #fff; text-align: center; width: 100%;">Little Krishna</h4>
-              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #9ca3af; text-align: center; width: 100%;">Animation</p>
+              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #a78bfa; text-align: center; width: 100%;">Animation</p>
             </div>
             <span class="portfolio-date" style="display: none;">2023-05-20</span>
           </div>
@@ -1462,13 +1136,13 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
             <img src="images/portfolio/Animation/thumb/img_006.jpg" class="img-fluid" alt="Big Bees Junior - 3D Animation" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Animation/img_006.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="images/portfolio/Animation/img_006.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Big Bees Junior" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); padding: 12px 10px; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80px;">
               <h4 style="margin: 0; font-size: 1rem; color: #fff; text-align: center; width: 100%;">Big Bees Junior</h4>
-              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #9ca3af; text-align: center; width: 100%;">Animation</p>
+              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #a78bfa; text-align: center; width: 100%;">Animation</p>
             </div>
             <span class="portfolio-date" style="display: none;">2023-06-15</span>
           </div>
@@ -1477,28 +1151,28 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
             <img src="images/portfolio/Animation/thumb/img_007.jpg" class="img-fluid" alt="Big Bees Junior - Behind the Scenes" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="https://vimeo.com/17021167" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="https://vimeo.com/17021167" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Big Bees Junior" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
                 <i class="bx bx-play"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); padding: 12px 10px; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80px;">
               <h4 style="margin: 0; font-size: 1rem; color: #fff; text-align: center; width: 100%;">Big Bees Junior</h4>
-              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #9ca3af; text-align: center; width: 100%;">Animation</p>
+              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #a78bfa; text-align: center; width: 100%;">Animation</p>
             </div>
             <span class="portfolio-date" style="display: none;">2023-07-01</span>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item filter-animation" style="position: absolute; left: 341.328px; top: 682.656px; padding: 0.75rem;" data-date="2023-08-10">
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
-            <img src="images/portfolio/Animation/thumb/img_008.jpg" class="img-fluid" alt="11 Second Club Submission - Animation" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <img src="images/portfolio/Animation/thumb/img_008.jpg" class="img-fluid" alt="Character Design - Animation Concepts" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Animation/img_008.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="images/portfolio/Animation/img_008.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Character Design" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); padding: 12px 10px; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80px;">
-              <h4 style="margin: 0; font-size: 1rem; color: #fff; text-align: center; width: 100%;">11 Second Club Submission</h4>
-              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #9ca3af; text-align: center; width: 100%;">Animation</p>
+              <h4 style="margin: 0; font-size: 1rem; color: #fff; text-align: center; width: 100%;">Character Design</h4>
+              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #a78bfa; text-align: center; width: 100%;">Animation</p>
             </div>
             <span class="portfolio-date" style="display: none;">2023-08-10</span>
           </div>
@@ -1507,13 +1181,13 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
             <img src="images/portfolio/Animation/thumb/img_009.jpg" class="img-fluid" alt="Freelance Animation Project" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Animation/img_009.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="images/portfolio/Animation/img_009.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Freelance Project" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); padding: 12px 10px; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80px;">
               <h4 style="margin: 0; font-size: 1rem; color: #fff; text-align: center; width: 100%;">Freelance Project</h4>
-              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #9ca3af; text-align: center; width: 100%;">Animation</p>
+              <p style="margin: 5px 0 0; font-size: 0.8rem; color: #a78bfa; text-align: center; width: 100%;">Animation</p>
             </div>
             <span class="portfolio-date" style="display: none;">2023-09-01</span>
           </div>
@@ -1522,7 +1196,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Architecture/thumb/img_001.jpg" class="img-fluid" alt="Interior Design" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Architecture/img_001.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Architecture/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Interior Design" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1535,30 +1209,30 @@ progressBars.forEach((bar, index) => {
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item filter-architecture" style="padding: 0.75rem;" data-date="2023-03-15">
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Architecture/thumb/img_002.jpg" class="img-fluid" alt="Interior Design" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <img src="images/portfolio/Architecture/thumb/img_002.jpg" class="img-fluid" alt="Exterior Design" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Architecture/img_002.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Architecture/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Exterior Design" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <span class="portfolio-date" style="display: none;">2023-03-15</span>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Interior Design</h4>
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Exterior Design</h4>
               <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Architecture</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item filter-architecture" style="padding: 0.75rem;" data-date="2023-04-10">
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Architecture/thumb/img_003.jpg" class="img-fluid" alt="Interior Design" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <img src="images/portfolio/Architecture/thumb/img_003.jpg" class="img-fluid" alt="Landscape Design" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Architecture/img_003.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Architecture/img_003.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Landscape Design" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <span class="portfolio-date" style="display: none;">2023-04-10</span>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Interior Design</h4>
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Landscape Design</h4>
               <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Architecture</p>
             </div>
           </div>
@@ -1567,7 +1241,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Architecture/thumb/img_004.jpg" class="img-fluid" alt="Interior Design" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Architecture/img_004.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Architecture/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Interior Design" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1580,15 +1254,15 @@ progressBars.forEach((bar, index) => {
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item filter-architecture" style="padding: 0.75rem;" data-date="2023-06-12">
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Architecture/thumb/img_005.jpg" class="img-fluid" alt="Interior Design" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <img src="images/portfolio/Architecture/thumb/img_005.jpg" class="img-fluid" alt="Exterior Design" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Architecture/img_005.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Architecture/img_005.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Exterior Design" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <span class="portfolio-date" style="display: none;">2023-06-12</span>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Interior Design</h4>
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Exterior Design</h4>
               <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Architecture</p>
             </div>
           </div>
@@ -1597,7 +1271,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Architecture/thumb/img_006.jpg" class="img-fluid" alt="Exterior Visualisation" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Architecture/img_006.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Architecture/img_006.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Exterior Visualisation" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1612,7 +1286,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Architecture/thumb/img_007.jpg" class="img-fluid" alt="Exterior Visualisation" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Architecture/img_007.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Architecture/img_007.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Exterior Visualisation" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1627,7 +1301,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Architecture/thumb/img_008.jpg" class="img-fluid" alt="Kitchen Interior Visualisation" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Architecture/img_008.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Architecture/img_008.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Kitchen Interior Visualisation" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1640,15 +1314,15 @@ progressBars.forEach((bar, index) => {
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item filter-art" style="padding: 0.75rem;" data-date="2023-01-10">
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Art/thumb/img_001.jpg" class="img-fluid" alt="3D Buddha's Hand Sculpture" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <img src="images/portfolio/Art/thumb/img_001.jpg" class="img-fluid" alt="Buddha's Hand" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Art/img_001.mp4" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Art/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Buddha's Hand" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <span class="portfolio-date" style="display: none;">2023-01-10</span>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Buddha's Hand Sculpture</h4>
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Buddha's Hand</h4>
               <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Art</p>
             </div>
           </div>
@@ -1657,7 +1331,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Freelance/thumb/img_001.jpg" class="img-fluid" alt="3D Glasses" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Freelance/img_001.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Freelance/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Glasses" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1670,168 +1344,98 @@ progressBars.forEach((bar, index) => {
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Freelance/thumb/img_002.jpg" class="img-fluid" alt="3D Alexandria Chair" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_002.jpg" class="img-fluid" alt="3D Glasses" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Freelance/img_002.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Freelance/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Glasses" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Alexandria Chair</h4>
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Glasses</h4>
               <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Freelance/thumb/img_003.jpg" class="img-fluid" alt="Photorealistic 3D Car Rendering" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_004.jpg" class="img-fluid" alt="Product 3D" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Freelance/img_003.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Freelance/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Product 3D" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Photorealistic 3D Car Rendering</h4>
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Product 3D</h4>
               <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Freelance/thumb/img_004.jpg" class="img-fluid" alt="3D Product Visualization" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_007.jpg" class="img-fluid" alt="Octopus for Gaming" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Freelance/img_004.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="images/portfolio/Freelance/img_007.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Octopus for Gaming" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Product Visualization</h4>
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Octopus for Gaming</h4>
               <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Freelance/thumb/img_005.jpg" class="img-fluid" alt="3D Lego Product Visualization" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_009.jpg" class="img-fluid" alt="Wedding Rings" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Freelance/img_005.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="images/portfolio/Freelance/img_009.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Wedding Rings" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Lego Product Visualization</h4>
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Wedding Rings</h4>
               <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Freelance/thumb/img_006.jpg" class="img-fluid" alt="3D Landscape Design for Games" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_010.jpg" class="img-fluid" alt="3D Model" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Freelance/img_006.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="images/portfolio/Freelance/img_010.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Model" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Landscape Design for Games</h4>
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Model</h4>
               <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Freelance/thumb/img_007.jpg" class="img-fluid" alt="3D Character Design for Gaming" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_011.jpg" class="img-fluid" alt="3D Model" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Freelance/img_007.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="images/portfolio/Freelance/img_011.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Model" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Character Design for Gaming</h4>
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Model</h4>
               <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Freelance/thumb/img_008.jpg" class="img-fluid" alt="3D Product Visualization" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_012.jpg" class="img-fluid" alt="3D Model" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Freelance/img_008.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
+              <a href="images/portfolio/Freelance/img_012.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Model" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
             <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Product Visualization</h4>
-              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
-          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Freelance/thumb/img_009.jpg" class="img-fluid" alt="3D Jewellery Visualization" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
-            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Freelance/img_009.jpg" data-glightbox="" class="portfolio-lightbox" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem;">
-                <i class="bx bx-plus"></i>
-              </a>
-            </div>
-            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Jewellery Visualization</h4>
-              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
-          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Freelance/thumb/img_010.jpg" class="img-fluid" alt="3D Technical Sculptures Visualization" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
-            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Freelance/img_010.jpg" data-glightbox="type: image; width: 60vw; height: 60vh;" class="portfolio-lightbox" title="3D Technical Sculptures Visualization" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
-                <i class="bx bx-plus"></i>
-              </a>
-            </div>
-            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Technical Sculptures Visualization</h4>
-              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
-          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Freelance/thumb/img_011.jpg" class="img-fluid" alt="3D Technical Sculptures Visualization" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
-            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Freelance/img_011.jpg" data-glightbox="type: image; width: 60vw; height: 60vh;" class="portfolio-lightbox" title="3D Technical Sculptures Visualization" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
-                <i class="bx bx-plus"></i>
-              </a>
-            </div>
-            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Technical Sculptures Visualization</h4>
-              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
-          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Freelance/thumb/img_012.jpg" class="img-fluid" alt="3D Technical Sculptures Visualization" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
-            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Freelance/img_012.jpg" data-glightbox="type: image; width: 60vw; height: 60vh;" class="portfolio-lightbox" title="3D Technical Sculptures Visualization" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
-                <i class="bx bx-plus"></i>
-              </a>
-            </div>
-            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Technical Sculptures Visualization</h4>
-              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
-          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <img src="images/portfolio/Freelance/thumb/img_055.jpg" class="img-fluid" alt="3D Character Design for Gaming" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
-            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Freelance/img_055.jpg" data-glightbox="type: image; width: 60vw; height: 60vh;" class="portfolio-lightbox" title="3D Character Design for Gaming" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
-                <i class="bx bx-plus"></i>
-              </a>
-            </div>
-            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
-              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Character Design for Gaming</h4>
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Model</h4>
               <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
             </div>
           </div>
@@ -1840,7 +1444,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_001.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_001.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1854,7 +1458,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_002.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_002.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1868,7 +1472,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_003.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_003.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_003.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1882,7 +1486,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_004.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_004.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1896,7 +1500,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_005.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_005.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_005.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1910,7 +1514,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_006.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_006.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_006.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1924,7 +1528,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_007.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_007.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_007.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1938,7 +1542,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_008.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_008.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_008.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1952,7 +1556,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_009.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_009.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_009.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1966,7 +1570,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_010.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_010.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_010.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1980,7 +1584,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_011.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_011.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_011.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -1994,7 +1598,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_012.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_012.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_012.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -2008,7 +1612,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_013.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_013.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_013.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -2022,7 +1626,7 @@ progressBars.forEach((bar, index) => {
           <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
             <img src="images/portfolio/Sketching/thumb/img_014.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
             <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease; z-index: 2;">
-              <a href="images/portfolio/Sketching/img_014.jpg" data-glightbox="" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+              <a href="images/portfolio/Sketching/img_014.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
                 <i class="bx bx-plus"></i>
               </a>
             </div>
@@ -2035,9 +1639,7 @@ progressBars.forEach((bar, index) => {
       </div>
     </div>
   </section>
-  <!-- End Portfolio Section -->
-  
-  <div style="border-top: 1px solid #2d2d2d; margin: 0;"></div> 
+  <!-- End Portfolio Section --> 
   
   <!-- ======= Reel Section ======= -->
   <section id="reel" class="py-5 py-md-7" style="background-color: #0d0d0d; color: #e0e0e0; padding: 5rem 0;">
@@ -2231,8 +1833,6 @@ progressBars.forEach((bar, index) => {
 
       </div>
     </section><!-- End Testimonials Section --> 
-    
-    <div style="border-top: 1px solid #2d2d2d; margin: 0;"></div>
   
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="py-5 py-md-7" style="background-color: #0d0d0d; color: #e0e0e0; padding: 5rem 0;">
@@ -2473,6 +2073,17 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/glightbox/js/glightbox.min.js"></script>
 <script>
+  // Initialize GLightbox
+  document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = GLightbox({
+      selector: '.portfolio-lightbox',
+      touchNavigation: true,
+      loop: true,
+      autoplayVideos: true
+    });
+  });
+</script>
+<script>
   // Enhanced Typed.js initialization
   document.addEventListener('DOMContentLoaded', function() {
     const typed = new Typed('#typed-text', {
@@ -2508,40 +2119,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 <script type="text/javascript" src="js/isotope-layout/isotope.pkgd.min.js"></script> 
 <script type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
   <script>
-    // Animate progress bars when in view
-    function animateProgressBars() {
-      const progressBars = document.querySelectorAll('#skills .col-md-6');
-      
-      progressBars.forEach(bar => {
-        const progressFill = bar.querySelector('div[style*="height: 8px"] > div');
-        const percentage = bar.querySelector('span:last-child').textContent;
-        
-        if (progressFill && percentage) {
-          progressFill.style.setProperty('--target-width', percentage);
-          progressFill.classList.add('skill-progress', 'animate');
-        }
-      });
-    }
-    
-    // Intersection Observer for scroll-based animation
-    function setupScrollAnimation() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateProgressBars();
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
-      
-      const skillsSection = document.querySelector('#skills');
-      if (skillsSection) {
-        observer.observe(skillsSection);
-      }
-    }
-    
     document.addEventListener('DOMContentLoaded', function() {
-      setupScrollAnimation();
       const sortButtons = document.querySelectorAll('.sort-btn');
       const sortOrder = document.getElementById('sortOrder');
       const portfolioContainer = document.querySelector('.portfolio-container');
@@ -2609,11 +2187,11 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     });
   </script>
   <!-- ======= Footer ======= -->
-  <footer id="footer" style="background-color: #0d0d0d; color: #9ca3af; padding: 4rem 0 0; position: relative; z-index: 1; width: 100%;">
-    <div style="width: 100%; max-width: 100%; margin: 0; padding: 0;">
-      <div class="resume-item" style="background-color: #1a1a1a; border-radius: 0; padding: 2rem 0; box-shadow: none;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-          <div style="max-width: 800px; margin: 0 auto; padding: 0 15px;">
+  <footer class="py-5" style="background-color: #0d0d0d; color: #e0e0e0; padding: 3rem 0; border-top: 1px solid #2d2d2d;">
+    <div class="container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 3rem;">
+      <div class="resume-item" style="background-color: #1a1a1a; border-radius: 8px; padding: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <div class="row" style="margin: 0 -15px;">
+          <div class="col-lg-8 mx-auto" style="padding: 0 15px; margin: 0 auto; max-width: 800px;">
             <h3 style="font-size: 1.5rem; font-weight: 600; color: #ffffff; margin-bottom: 1.5rem; text-align: center; position: relative; padding-bottom: 0.75rem;">
               <span style="position: relative;">Let's Work Together</span>
               <span style="position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 50px; height: 3px; background-color: #a78bfa;"></span>
@@ -2637,9 +2215,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             </div>
             
             <div class="social-links text-center mb-4">
-              <a href="https://www.flickr.com/photos/sandeeptangri/" target="_blank" class="mx-2" style="color: #9ca3af; font-size: 1.5rem; transition: color 0.3s ease;" onmouseover="this.style.color='#ff0084'" onmouseout="this.style.color='#9ca3af'">
-                <i class="bi bi-camera"></i>
-              </a>
               <a href="https://www.linkedin.com/in/sandeep-tangri/" target="_blank" class="mx-2" style="color: #9ca3af; font-size: 1.5rem; transition: color 0.3s ease;" onmouseover="this.style.color='#0077b5'" onmouseout="this.style.color='#9ca3af'">
                 <i class="bi bi-linkedin"></i>
               </a>
@@ -2654,11 +2229,9 @@ document.getElementById('contact-form').addEventListener('submit', function(even
               </a>
             </div>
             
-            <div class="text-center" style="margin: 2rem auto 0; padding: 1.5rem 2rem 0; border-top: 1px solid #2d2d2d; width: 100%;">
-              <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
-                <p style="margin: 0 auto 0.5rem; color: #9ca3af; font-size: 0.875rem; line-height: 1.5; max-width: 600px;"> 2024 Sandeep Tangri. All rights reserved.</p>
-                <p style="margin: 0 auto; color: #6b7280; font-size: 0.75rem; line-height: 1.5; max-width: 600px;">Designed with passion and precision</p>
-              </div>
+            <div class="text-center" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #2d2d2d;">
+              <p style="margin-bottom: 0.5rem; color: #9ca3af; font-size: 0.875rem;">© 2024 Sandeep Tangri. All rights reserved.</p>
+              <p style="margin-bottom: 0; color: #6b7280; font-size: 0.75rem;">Designed with passion and precision</p>
             </div>
           </div>
         </div>
@@ -2668,137 +2241,19 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   <!-- End Footer -->
 
   <!-- Vendor JS Files -->
-  <script src="js/plugins/gsap.min.js"></script>
-  <script src="js/plugins/glightbox.min.js"></script>
-  <script>
-    // Initialize lightbox with custom settings
-    document.addEventListener('DOMContentLoaded', function() {
-      const lightbox = GLightbox({
-        selector: '.portfolio-lightbox',
-        touchNavigation: true,
-        keyboardNavigation: true,
-        closeOnOutsideClick: true,
-        loop: true,
-        autoplayVideos: true,
-        width: '60vw',
-        height: '60vh',
-        plyr: {
-          config: {
-            ratio: '16:9',
-            fullscreen: { enabled: true, fallback: true, iosNative: true },
-            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
-            settings: ['quality', 'speed'],
-            quality: {
-              default: 1080,
-              options: [4320, 2880, 2160, 1440, 1080, 720, 576, 480, 360, 240]
-            },
-            speed: { selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2] },
-            previewThumbnails: {
-              enabled: true,
-              src: ''
-            },
-            vimeo: { byline: false, portrait: false, title: false, speed: true },
-            youtube: { noCookie: true, rel: 0, showinfo: 0, iv_load_policy: 3, modestbranding: 1 }
-          }
-        },
-        onOpen: () => {
-          document.body.style.overflow = 'hidden';
-        },
-        onClose: () => {
-          document.body.style.overflow = '';
-        }
-      });
-
-      // Initialize lightbox for all portfolio items
-      const lightboxElements = document.querySelectorAll('.portfolio-lightbox');
-      lightboxElements.forEach(element => {
-        if (element.getAttribute('data-glightbox') && element.getAttribute('data-glightbox').includes('Earthlings')) {
-          // Already has the correct data attributes
-          return;
-        }
-      });
-    });
-  </script>
+  <script src="js/aos.js"></script>
   <script src="js/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="js/swiper/swiper-bundle.min.js"></script>
   <script src="js/typed.js"></script>
   <script src="js/main.js"></script>
   
   <script>
-    // Function to initialize progress bar animation
-    function initProgressBars() {
-      // Add animation class to all progress bars
-      document.querySelectorAll('#skills .col-md-6').forEach(skillItem => {
-        const progressBar = skillItem.querySelector('div[style*="height: 8px"] > div');
-        if (progressBar) {
-          progressBar.classList.add('skill-progress');
-          progressBar.style.width = '0%';
-        }
-      });
-    }
-    
-    // Animate progress bars when in view
-    function animateProgressBars() {
-      const skillItems = document.querySelectorAll('#skills .col-md-6');
-      
-      skillItems.forEach(item => {
-        const progressBar = item.querySelector('div[style*="height: 8px"] > div');
-        const percentage = item.querySelector('span:last-child').textContent;
-        
-        if (progressBar && percentage) {
-          const targetWidth = parseInt(percentage);
-          progressBar.style.width = targetWidth + '%';
-        }
-      });
-    }
-    
-    // Intersection Observer for scroll-based animation
-    function setupIntersectionObserver() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateProgressBars();
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
-      
-      const skillsSection = document.querySelector('#skills');
-      if (skillsSection) {
-        observer.observe(skillsSection);
-      }
-    }
-    
-    // Initialize everything when DOM is loaded
     document.addEventListener('DOMContentLoaded', function() {
-      initProgressBars();
-      setupIntersectionObserver();
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-      // Close mobile menu when clicking on a nav link
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          const navbarToggler = document.querySelector('.navbar-toggler');
-          const navbarCollapse = document.querySelector('.navbar-collapse');
-          
-          if (navbarCollapse.classList.contains('show')) {
-            // Close the navbar by triggering a click on the toggler
-            navbarToggler.click();
-          }
-        });
-      });
-
       // Initialize tooltips
       var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
       });
-      
-      // Add scroll event listener for progress bar animation
-      window.addEventListener('scroll', handleScroll);
-      // Check on initial load in case section is already in view
-      handleScroll();
 
       // Contact form submission
       const contactForm = document.getElementById('contact-form');
@@ -2929,71 +2384,5 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     </div>
   </div>
   
-  <!-- Scroll to Top Button -->
-  <a href="#" class="scroll-top" id="scrollTop">
-    <i class='bx bxs-chevron-up'></i>
-  </a>
-
-  <!-- Scroll to Top Button Styles -->
-  <style>
-    .scroll-top {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(135deg, #a78bfa, #6c63ff);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(167, 139, 250, 0.3);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(20px);
-      transition: all 0.3s ease;
-      z-index: 999;
-    }
-    
-    .scroll-top.visible {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-    
-    .scroll-top:hover {
-      background: linear-gradient(135deg, #8c7ae6, #5d4fdb);
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 6px 20px rgba(167, 139, 250, 0.4);
-    }
-  </style>
-
-  <!-- Scroll to Top Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const scrollButton = document.getElementById('scrollTop');
-      
-      // Show/hide button on scroll
-      window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-          scrollButton.classList.add('visible');
-        } else {
-          scrollButton.classList.remove('visible');
-        }
-      });
-      
-      // Smooth scroll to top
-      scrollButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-  </body>
+</body>
 </html>

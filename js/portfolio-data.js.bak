@@ -1,0 +1,1243 @@
+// Global portfolio data
+window.portfolioData = [
+  // Animation
+  {
+    id: 1,
+    title: "Earthlings",
+    category: "animation",
+    date: "2023-01-15",
+    thumb: "images/portfolio/Animation/thumb/img_001.jpg",
+    full: "images/portfolio/Animation/img_001.jpg",
+    type: "image"
+  },
+  {
+    id: 2,
+    title: "Meri Bhains Ko Anda Kyun Mara",
+    category: "animation",
+    date: "2023-02-10",
+    thumb: "images/portfolio/Animation/thumb/img_002.jpg",
+    full: "images/portfolio/Animation/img_002.jpg",
+    type: "image"
+  },
+  {
+    id: 3,
+    title: "Big Bees Junior",
+    category: "animation",
+    date: "2023-03-05",
+    thumb: "images/portfolio/Animation/thumb/img_003.jpg",
+    full: "images/portfolio/Animation/img_003.jpg",
+    type: "image"
+  },
+  {
+    id: 4,
+    title: "Animation 4",
+    category: "animation",
+    date: "2023-04-20",
+    thumb: "images/portfolio/Animation/thumb/img_004.jpg",
+    full: "images/portfolio/Animation/img_004.jpg",
+    type: "image"
+  },
+  {
+    id: 5,
+    title: "Little Krishna",
+    category: "animation",
+    date: "2023-05-15",
+    thumb: "images/portfolio/Animation/thumb/img_005.jpg",
+    full: "images/portfolio/Animation/little_krishna_hd_(big_animation) (240p).mp4",
+    type: "video"
+  },
+  {
+    id: 6,
+    title: "Animation 6",
+    category: "animation",
+    date: "2023-06-01",
+    thumb: "images/portfolio/Animation/thumb/img_006.jpg",
+    full: "images/portfolio/Animation/img_006.jpg",
+    type: "image"
+  },
+  {
+    id: 7,
+    title: "Big Bees Junior Video",
+    category: "animation",
+    date: "2023-07-10",
+    thumb: "images/portfolio/Animation/thumb/img_007.jpg",
+    full: "https://vimeo.com/17021167",
+    type: "video"
+  },
+  {
+    id: 8,
+    title: "Animation 8",
+    category: "animation",
+    date: "2023-08-22",
+    thumb: "images/portfolio/Animation/thumb/img_008.jpg",
+    full: "images/portfolio/Animation/img_008.jpg",
+    type: "image"
+  },
+  {
+    id: 9,
+    title: "Animation 9",
+    category: "animation",
+    date: "2023-09-05",
+    thumb: "images/portfolio/Animation/thumb/img_009.jpg",
+    full: "images/portfolio/Animation/img_009.jpg",
+    type: "image"
+  },
+  {
+    id: 10,
+    title: "Animation 10",
+    category: "animation",
+    date: "2023-10-15",
+    thumb: "images/portfolio/Animation/thumb/img_001.jpg",
+    full: "images/portfolio/Animation/img_001.jpg",
+    type: "image"
+  },
+
+  // Architecture
+  {
+    id: 11,
+    title: "Architecture 1",
+    category: "architecture",
+    date: "2023-01-10",
+    thumb: "images/portfolio/Architecture/thumb/img_001.jpg",
+    full: "images/portfolio/Architecture/img_001.jpg",
+    type: "image"
+  },
+  {
+    id: 12,
+    title: "Architecture 2",
+    category: "architecture",
+    date: "2023-02-20",
+    thumb: "images/portfolio/Architecture/thumb/img_002.jpg",
+    full: "images/portfolio/Architecture/img_002.jpg",
+    type: "image"
+  },
+  {
+    id: 13,
+    title: "Architecture 3",
+    category: "architecture",
+    date: "2023-03-15",
+    thumb: "images/portfolio/Architecture/thumb/img_003.jpg",
+    full: "images/portfolio/Architecture/img_003.jpg",
+    type: "image"
+  },
+  {
+    id: 14,
+    title: "Architecture 4",
+    category: "architecture",
+    date: "2023-04-05",
+    thumb: "images/portfolio/Architecture/thumb/img_004.jpg",
+    full: "images/portfolio/Architecture/img_004.jpg",
+    type: "image"
+  },
+  {
+    id: 15,
+    title: "Architecture 5",
+    category: "architecture",
+    date: "2023-05-12",
+    thumb: "images/portfolio/Architecture/thumb/img_005.jpg",
+    full: "images/portfolio/Architecture/img_005.jpg",
+    type: "image"
+  },
+  {
+    id: 16,
+    title: "Architecture 6",
+    category: "architecture",
+    date: "2023-06-08",
+    thumb: "images/portfolio/Architecture/thumb/img_006.jpg",
+    full: "images/portfolio/Architecture/img_006.jpg",
+    type: "image"
+  },
+  {
+    id: 17,
+    title: "Architecture 7",
+    category: "architecture",
+    date: "2023-07-22",
+    thumb: "images/portfolio/Architecture/thumb/img_007.jpg",
+    full: "images/portfolio/Architecture/img_007.jpg",
+    type: "image"
+  },
+  {
+    id: 18,
+    title: "Architecture 8",
+    category: "architecture",
+    date: "2023-08-15",
+    thumb: "images/portfolio/Architecture/thumb/img_008.jpg",
+    full: "images/portfolio/Architecture/img_008.jpg",
+    type: "image"
+  },
+
+  // Art
+  {
+    id: 19,
+    title: "Art Video",
+    category: "art",
+    date: "2023-03-10",
+    thumb: "images/portfolio/Art/thumb/img_001.jpg",
+    full: "images/portfolio/Art/img_001.mp4",
+    type: "video"
+  },
+
+  // Freelance
+  {
+    id: 20,
+    title: "Freelance 1",
+    category: "freelance",
+    date: "2023-01-08",
+    thumb: "images/portfolio/Freelance/thumb/img_001.jpg",
+    full: "images/portfolio/Freelance/img_001.jpg",
+    type: "image"
+  },
+  {
+    id: 21,
+    title: "Freelance 2",
+    category: "freelance",
+    date: "2023-02-18",
+    thumb: "images/portfolio/Freelance/thumb/img_002.jpg",
+    full: "images/portfolio/Freelance/img_002.jpg",
+    type: "image"
+  },
+  {
+    id: 22,
+    title: "Freelance 3",
+    category: "freelance",
+    date: "2023-03-12",
+    thumb: "images/portfolio/Freelance/thumb/img_003.jpg",
+    full: "images/portfolio/Freelance/img_003.jpg",
+    type: "image"
+  },
+  {
+    id: 23,
+    title: "Freelance 4",
+    category: "freelance",
+    date: "2023-04-25",
+    thumb: "images/portfolio/Freelance/thumb/img_004.jpg",
+    full: "images/portfolio/Freelance/img_004.jpg",
+    type: "image"
+  },
+  {
+    id: 24,
+    title: "Freelance 5",
+    category: "freelance",
+    date: "2023-05-18",
+    thumb: "images/portfolio/Freelance/thumb/img_005.jpg",
+    full: "images/portfolio/Freelance/img_005.jpg",
+    type: "image"
+  },
+  {
+    id: 25,
+    title: "Freelance 6",
+    category: "freelance",
+    date: "2023-06-05",
+    thumb: "images/portfolio/Freelance/thumb/img_006.jpg",
+    full: "images/portfolio/Freelance/img_006.jpg",
+    type: "image"
+  },
+  {
+    id: 26,
+    title: "Freelance 7",
+    category: "freelance",
+    date: "2023-07-15",
+    thumb: "images/portfolio/Freelance/thumb/img_007.jpg",
+    full: "images/portfolio/Freelance/img_007.jpg",
+    type: "image"
+  },
+  {
+    id: 27,
+    title: "Freelance 8",
+    category: "freelance",
+    date: "2023-08-20",
+    thumb: "images/portfolio/Freelance/thumb/img_008.jpg",
+    full: "images/portfolio/Freelance/img_008.jpg",
+    type: "image"
+  },
+  {
+    id: 28,
+    title: "Freelance 9",
+    category: "freelance",
+    date: "2023-09-08",
+    thumb: "images/portfolio/Freelance/thumb/img_009.jpg",
+    full: "images/portfolio/Freelance/img_009.jpg",
+    type: "image"
+  },
+  {
+    id: 29,
+    title: "Freelance 10",
+    category: "freelance",
+    date: "2023-10-20",
+    thumb: "images/portfolio/Freelance/thumb/img_010.jpg",
+    full: "images/portfolio/Freelance/img_010.jpg",
+    type: "image"
+  },
+  {
+    id: 30,
+    title: "Freelance 11",
+    category: "freelance",
+    date: "2023-11-05",
+    thumb: "images/portfolio/Freelance/thumb/img_011.jpg",
+    full: "images/portfolio/Freelance/img_011.jpg",
+    type: "image"
+  },
+  {
+    id: 31,
+    title: "Freelance 12",
+    category: "freelance",
+    date: "2023-11-15",
+    thumb: "images/portfolio/Freelance/thumb/img_012.jpg",
+    full: "images/portfolio/Freelance/img_012.jpg",
+    type: "image"
+  },
+  {
+    id: 32,
+    title: "Freelance 13",
+    category: "freelance",
+    date: "2023-12-01",
+    thumb: "images/portfolio/Freelance/thumb/img_055.jpg",
+    full: "images/portfolio/Freelance/img_055.jpg",
+    type: "image"
+  },
+
+  // Sketching
+  {
+    id: 33,
+    title: "Sketch 1",
+    category: "sketching",
+    date: "2023-01-12",
+    thumb: "images/portfolio/Sketching/thumb/img_001.jpg",
+    full: "images/portfolio/Sketching/img_001.jpg",
+    type: "image"
+  },
+  {
+    id: 34,
+    title: "Sketch 2",
+    category: "sketching",
+    date: "2023-03-08",
+    thumb: "images/portfolio/Sketching/thumb/img_002.jpg",
+    full: "images/portfolio/Sketching/img_002.jpg",
+    type: "image"
+  },
+  {
+    id: 35,
+    title: "Sketch 3",
+    category: "sketching",
+    date: "2023-05-20",
+    thumb: "images/portfolio/Sketching/thumb/img_003.jpg",
+    full: "images/portfolio/Sketching/img_003.jpg",
+    type: "image"
+  },
+  {
+    id: 36,
+    title: "Sketch 4",
+    category: "sketching",
+    date: "2023-08-10",
+    thumb: "images/portfolio/Sketching/thumb/img_004.jpg",
+    full: "images/portfolio/Sketching/img_004.jpg",
+    type: "image"
+  },
+  {
+    id: 37,
+    title: "Sketch 5",
+    category: "sketching",
+    date: "2023-10-05",
+    thumb: "images/portfolio/Sketching/thumb/img_005.jpg",
+    full: "images/portfolio/Sketching/img_005.jpg",
+    type: "image"
+  },
+  {
+    id: 38,
+    title: "Sketch 6",
+    category: "sketching",
+    date: "2023-11-15",
+    thumb: "images/portfolio/Sketching/thumb/img_006.jpg",
+    full: "images/portfolio/Sketching/img_006.jpg",
+    type: "image"
+  },
+  {
+    id: 39,
+    title: "Sketch 7",
+    category: "sketching",
+    date: "2023-12-01",
+    thumb: "images/portfolio/Sketching/thumb/img_007.jpg",
+    full: "images/portfolio/Sketching/img_007.jpg",
+    type: "image"
+  },
+  {
+    id: 40,
+    title: "Sketch 8",
+    category: "sketching",
+    date: "2023-12-10",
+    thumb: "images/portfolio/Sketching/thumb/img_008.jpg",
+    full: "images/portfolio/Sketching/img_008.jpg",
+    type: "image"
+  },
+  {
+    id: 41,
+    title: "Sketch 9",
+    category: "sketching",
+    date: "2023-12-15",
+    thumb: "images/portfolio/Sketching/thumb/img_009.jpg",
+    full: "images/portfolio/Sketching/img_009.jpg",
+    type: "image"
+  },
+  {
+    id: 42,
+    title: "Sketch 10",
+    category: "sketching",
+    date: "2023-12-20",
+    thumb: "images/portfolio/Sketching/thumb/img_010.jpg",
+    full: "images/portfolio/Sketching/img_010.jpg",
+    type: "image"
+  },
+  {
+    id: 43,
+    title: "Sketch 11",
+    category: "sketching",
+    date: "2023-12-25",
+    thumb: "images/portfolio/Sketching/thumb/img_011.jpg",
+    full: "images/portfolio/Sketching/img_011.jpg",
+    type: "image"
+  },
+  {
+    id: 44,
+    title: "Sketch 12",
+    category: "sketching",
+    date: "2023-12-28",
+    thumb: "images/portfolio/Sketching/thumb/img_012.jpg",
+    full: "images/portfolio/Sketching/img_012.jpg",
+    type: "image"
+  },
+  {
+    id: 45,
+    title: "Sketch 13",
+    category: "sketching",
+    date: "2023-12-30",
+    thumb: "images/portfolio/Sketching/thumb/img_013.jpg",
+    full: "images/portfolio/Sketching/img_013.jpg",
+    type: "image"
+  },
+  {
+    id: 46,
+    title: "Sketch 14",
+    category: "sketching",
+    date: "2024-01-05",
+    thumb: "images/portfolio/Sketching/thumb/img_014.jpg",
+    full: "images/portfolio/Sketching/img_014.jpg",
+    type: "image"
+  },
+  {
+    id: 3,
+    title: "Big Bees Junior",
+    category: "animation",
+    date: "2023-03-05",
+    thumb: "images/portfolio/Animation/thumb/img_003.jpg",
+    full: "https://vimeo.com/17021167",
+    type: "video"
+  },
+  {
+    id: 4,
+    title: "Character Animation Reel",
+    category: "animation",
+    date: "2023-04-20",
+    thumb: "images/portfolio/Animation/thumb/img_004.jpg",
+    full: "https://vimeo.com/example1",
+    type: "video"
+  },
+  {
+    id: 5,
+    title: "Little Krishna",
+    category: "animation",
+    date: "2023-05-15",
+    thumb: "images/portfolio/Animation/thumb/img_005.jpg",
+    full: "images/portfolio/Animation/little_krishna_hd_(big_animation).mp4",
+    type: "video"
+  },
+  {
+    id: 6,
+    title: "3D Character Animation",
+    category: "animation",
+    date: "2023-06-01",
+    thumb: "images/portfolio/Animation/thumb/img_006.jpg",
+    full: "images/portfolio/Animation/img_006.jpg",
+    type: "image"
+  },
+  {
+    id: 7,
+    title: "Big Bees Junior Video",
+    category: "animation",
+    date: "2023-07-10",
+    thumb: "images/portfolio/Animation/thumb/img_007.jpg",
+    full: "https://vimeo.com/example2",
+    type: "video"
+  },
+  {
+    id: 8,
+    title: "Animated Short Film",
+    category: "animation",
+    date: "2023-08-22",
+    thumb: "images/portfolio/Animation/thumb/img_008.jpg",
+    full: "images/portfolio/Animation/img_008.jpg",
+    type: "image"
+  },
+  {
+    id: 9,
+    title: "Freelance Project",
+    category: "animation",
+    date: "2023-09-05",
+    thumb: "images/portfolio/Animation/thumb/img_009.jpg",
+    full: "images/portfolio/Animation/img_009.jpg",
+    type: "image"
+  },
+  {
+    id: 10,
+    title: "Motion Graphics Reel",
+    category: "animation",
+    date: "2023-10-15",
+    thumb: "images/portfolio/Animation/thumb/img_010.jpg",
+    full: "https://vimeo.com/example3",
+    type: "video"
+  },
+
+  // Architecture (10 items)
+  {
+    id: 11,
+    title: "Interior Design",
+    category: "architecture",
+    date: "2023-01-10",
+    thumb: "images/portfolio/Architecture/thumb/img_001.jpg",
+    full: "images/portfolio/Architecture/img_001.jpg",
+    type: "image"
+  },
+  {
+    id: 12,
+    title: "Modern Villa Design",
+    category: "architecture",
+    date: "2023-02-20",
+    thumb: "images/portfolio/Architecture/thumb/img_002.jpg",
+    full: "images/portfolio/Architecture/img_002.jpg",
+    type: "image"
+  },
+  {
+    id: 13,
+    title: "Landscape Design",
+    category: "architecture",
+    date: "2023-03-15",
+    thumb: "images/portfolio/Architecture/thumb/img_003.jpg",
+    full: "images/portfolio/Architecture/img_003.jpg",
+    type: "image"
+  },
+  {
+    id: 14,
+    title: "Urban Planning",
+    category: "architecture",
+    date: "2023-04-05",
+    thumb: "images/portfolio/Architecture/thumb/img_004.jpg",
+    full: "images/portfolio/Architecture/img_004.jpg",
+    type: "image"
+  },
+  {
+    id: 15,
+    title: "Exterior Design",
+    category: "architecture",
+    date: "2023-05-12",
+    thumb: "images/portfolio/Architecture/thumb/img_005.jpg",
+    full: "images/portfolio/Architecture/img_005.jpg",
+    type: "image"
+  },
+  {
+    id: 16,
+    title: "Residential Complex",
+    category: "architecture",
+    date: "2023-06-08",
+    thumb: "images/portfolio/Architecture/thumb/img_006.jpg",
+    full: "images/portfolio/Architecture/img_006.jpg",
+    type: "image"
+  },
+  {
+    id: 17,
+    title: "Office Building",
+    category: "architecture",
+    date: "2023-07-22",
+    thumb: "images/portfolio/Architecture/thumb/img_007.jpg",
+    full: "images/portfolio/Architecture/img_007.jpg",
+    type: "image"
+  },
+  {
+    id: 18,
+    title: "Kitchen Interior Visualisation",
+    category: "architecture",
+    date: "2023-08-15",
+    thumb: "images/portfolio/Architecture/thumb/img_008.jpg",
+    full: "images/portfolio/Architecture/img_008.jpg",
+    type: "image"
+  },
+  {
+    id: 19,
+    title: "Luxury Apartment",
+    category: "architecture",
+    date: "2023-09-01",
+    thumb: "images/portfolio/Architecture/thumb/img_009.jpg",
+    full: "images/portfolio/Architecture/img_009.jpg",
+    type: "image"
+  },
+  {
+    id: 20,
+    title: "Commercial Space",
+    category: "architecture",
+    date: "2023-10-10",
+    thumb: "images/portfolio/Architecture/thumb/img_010.jpg",
+    full: "images/portfolio/Architecture/img_010.jpg",
+    type: "image"
+  },
+
+  // Art (10 items)
+  {
+    id: 21,
+    title: "Digital Painting",
+    category: "art",
+    date: "2023-01-05",
+    thumb: "images/portfolio/Art/thumb/img_001.jpg",
+    full: "images/portfolio/Art/img_001.jpg",
+    type: "image"
+  },
+  {
+    id: 22,
+    title: "Character Design",
+    category: "art",
+    date: "2023-02-15",
+    thumb: "images/portfolio/Art/thumb/img_002.jpg",
+    full: "images/portfolio/Art/img_002.jpg",
+    type: "image"
+  },
+  {
+    id: 23,
+    title: "3D Art",
+    category: "art",
+    date: "2023-03-10",
+    thumb: "images/portfolio/Art/thumb/img_003.jpg",
+    full: "images/portfolio/Art/img_003.jpg",
+    type: "image"
+  },
+  {
+    id: 24,
+    title: "Concept Art",
+    category: "art",
+    date: "2023-04-20",
+    thumb: "images/portfolio/Art/thumb/img_004.jpg",
+    full: "images/portfolio/Art/img_004.jpg",
+    type: "image"
+  },
+  {
+    id: 25,
+    title: "Illustration Series",
+    category: "art",
+    date: "2023-05-15",
+    thumb: "images/portfolio/Art/thumb/img_005.jpg",
+    full: "images/portfolio/Art/img_005.jpg",
+    type: "image"
+  },
+  {
+    id: 26,
+    title: "Digital Sculpture",
+    category: "art",
+    date: "2023-06-01",
+    thumb: "images/portfolio/Art/thumb/img_006.jpg",
+    full: "images/portfolio/Art/img_006.jpg",
+    type: "image"
+  },
+  {
+    id: 27,
+    title: "Fan Art",
+    category: "art",
+    date: "2023-07-10",
+    thumb: "images/portfolio/Art/thumb/img_007.jpg",
+    full: "images/portfolio/Art/img_007.jpg",
+    type: "image"
+  },
+  {
+    id: 28,
+    title: "Environmental Art",
+    category: "art",
+    date: "2023-08-22",
+    thumb: "images/portfolio/Art/thumb/img_008.jpg",
+    full: "images/portfolio/Art/img_008.jpg",
+    type: "image"
+  },
+  {
+    id: 29,
+    title: "Portrait Study",
+    category: "art",
+    date: "2023-09-05",
+    thumb: "images/portfolio/Art/thumb/img_009.jpg",
+    full: "images/portfolio/Art/img_009.jpg",
+    type: "image"
+  },
+  {
+    id: 30,
+    title: "Fantasy Art",
+    category: "art",
+    date: "2023-10-15",
+    thumb: "images/portfolio/Art/thumb/img_010.jpg",
+    full: "images/portfolio/Art/img_010.jpg",
+    type: "image"
+  },
+
+  // Freelance (10 items)
+  {
+    id: 31,
+    title: "3D Glasses",
+    category: "freelance",
+    date: "2023-01-08",
+    thumb: "images/portfolio/Freelance/thumb/img_001.jpg",
+    full: "images/portfolio/Freelance/img_001.jpg",
+    type: "image"
+  },
+  {
+    id: 32,
+    title: "Product Visualization",
+    category: "freelance",
+    date: "2023-02-18",
+    thumb: "images/portfolio/Freelance/thumb/img_002.jpg",
+    full: "images/portfolio/Freelance/img_002.jpg",
+    type: "image"
+  },
+  {
+    id: 33,
+    title: "3D Model",
+    category: "freelance",
+    date: "2023-03-12",
+    thumb: "images/portfolio/Freelance/thumb/img_003.jpg",
+    full: "images/portfolio/Freelance/img_003.jpg",
+    type: "image"
+  },
+  {
+    id: 34,
+    title: "Character Design",
+    category: "freelance",
+    date: "2023-04-25",
+    thumb: "images/portfolio/Freelance/thumb/img_004.jpg",
+    full: "images/portfolio/Freelance/img_004.jpg",
+    type: "image"
+  },
+  {
+    id: 35,
+    title: "3D Animation",
+    category: "freelance",
+    date: "2023-05-18",
+    thumb: "images/portfolio/Freelance/thumb/img_005.jpg",
+    full: "images/portfolio/Freelance/img_005.jpg",
+    type: "image"
+  },
+  {
+    id: 36,
+    title: "Architectural Visualization",
+    category: "freelance",
+    date: "2023-06-05",
+    thumb: "images/portfolio/Freelance/thumb/img_006.jpg",
+    full: "images/portfolio/Freelance/img_006.jpg",
+    type: "image"
+  },
+  {
+    id: 37,
+    title: "Octopus for Gaming",
+    category: "freelance",
+    date: "2023-07-15",
+    thumb: "images/portfolio/Freelance/thumb/img_007.jpg",
+    full: "images/portfolio/Freelance/img_007.jpg",
+    type: "image"
+  },
+  {
+    id: 38,
+    title: "3D Character",
+    category: "freelance",
+    date: "2023-08-20",
+    thumb: "images/portfolio/Freelance/thumb/img_008.jpg",
+    full: "images/portfolio/Freelance/img_008.jpg",
+    type: "image"
+  },
+  {
+    id: 39,
+    title: "Wedding Rings",
+    category: "freelance",
+    date: "2023-09-08",
+    thumb: "images/portfolio/Freelance/thumb/img_009.jpg",
+    full: "images/portfolio/Freelance/img_009.jpg",
+    type: "image"
+  },
+  {
+    id: 40,
+    title: "Product Design",
+    category: "freelance",
+    date: "2023-10-20",
+    thumb: "images/portfolio/Freelance/thumb/img_010.jpg",
+    full: "images/portfolio/Freelance/img_010.jpg",
+    type: "image"
+  },
+
+  // Sketching (5 items)
+  {
+    id: 41,
+    title: "Character Sketch",
+    category: "sketching",
+    date: "2023-01-12",
+    thumb: "images/portfolio/Sketching/thumb/img_001.jpg",
+    full: "images/portfolio/Sketching/img_001.jpg",
+    type: "image"
+  },
+  {
+    id: 42,
+    title: "Gesture Drawing",
+    category: "sketching",
+    date: "2023-03-08",
+    thumb: "images/portfolio/Sketching/thumb/img_002.jpg",
+    full: "images/portfolio/Sketching/img_002.jpg",
+    type: "image"
+  },
+  {
+    id: 43,
+    title: "Portrait Sketch",
+    category: "sketching",
+    date: "2023-05-20",
+    thumb: "images/portfolio/Sketching/thumb/img_003.jpg",
+    full: "images/portfolio/Sketching/img_003.jpg",
+    type: "image"
+  },
+  {
+    id: 44,
+    title: "Figure Drawing",
+    category: "sketching",
+    date: "2023-08-10",
+    thumb: "images/portfolio/Sketching/thumb/img_004.jpg",
+    full: "images/portfolio/Sketching/img_004.jpg",
+    type: "image"
+  },
+  {
+    id: 45,
+    title: "Environment Sketch",
+    category: "sketching",
+    date: "2023-10-05",
+    thumb: "images/portfolio/Sketching/thumb/img_005.jpg",
+    full: "images/portfolio/Sketching/img_005.jpg",
+    type: "image"
+  }
+  {
+    id: 1,
+    title: "Animation 1",
+    category: "animation",
+    date: "2023-01-15",
+    thumb: "images/portfolio/Animation/thumb/img_001.jpg",
+    full: "images/portfolio/Animation/img_001.jpg",
+    type: "image"
+  },
+  {
+    id: 2,
+    title: "Animation 2",
+    category: "animation",
+    date: "2023-02-10",
+    thumb: "images/portfolio/Animation/thumb/img_002.jpg",
+    full: "images/portfolio/Animation/img_002.jpg",
+    type: "image"
+  },
+  {
+    id: 3,
+    title: "Animation 3",
+    category: "animation",
+    date: "2023-03-05",
+    thumb: "images/portfolio/Animation/thumb/img_003.jpg",
+    full: "images/portfolio/Animation/img_003.jpg",
+    type: "image"
+  },
+  {
+    id: 4,
+    title: "Animation 4",
+    category: "animation",
+    date: "2023-04-20",
+    thumb: "images/portfolio/Animation/thumb/img_004.jpg",
+    full: "images/portfolio/Animation/img_004.jpg",
+    type: "image"
+  },
+  {
+    id: 5,
+    title: "Little Krishna",
+    category: "animation",
+    date: "2023-05-15",
+    thumb: "images/portfolio/Animation/thumb/img_005.jpg",
+    full: "images/portfolio/Animation/little_krishna_hd_(big_animation) (240p).mp4",
+    type: "video"
+  },
+  {
+    id: 6,
+    title: "Animation 6",
+    category: "animation",
+    date: "2023-06-01",
+    thumb: "images/portfolio/Animation/thumb/img_006.jpg",
+    full: "images/portfolio/Animation/img_006.jpg",
+    type: "image"
+  },
+  {
+    id: 7,
+    title: "Big Bees Junior",
+    category: "animation",
+    date: "2023-07-10",
+    thumb: "images/portfolio/Animation/thumb/img_007.jpg",
+    full: "https://vimeo.com/17021167",
+    type: "video"
+  },
+  {
+    id: 8,
+    title: "Animation 8",
+    category: "animation",
+    date: "2023-08-22",
+    thumb: "images/portfolio/Animation/thumb/img_008.jpg",
+    full: "images/portfolio/Animation/img_008.jpg",
+    type: "image"
+  },
+  {
+    id: 9,
+    title: "Animation 9",
+    category: "animation",
+    date: "2023-09-05",
+    thumb: "images/portfolio/Animation/thumb/img_009.jpg",
+    full: "images/portfolio/Animation/img_009.jpg",
+    type: "image"
+  },
+  {
+    id: 10,
+    title: "Animation 10",
+    category: "animation",
+    date: "2023-10-15",
+    thumb: "images/portfolio/Animation/thumb/img_001.jpg",
+    full: "images/portfolio/Animation/img_001.jpg",
+    type: "image"
+  },
+
+  // Architecture
+  {
+    id: 11,
+    title: "Architecture 1",
+    category: "architecture",
+    date: "2023-01-10",
+    thumb: "images/portfolio/Architecture/thumb/img_001.jpg",
+    full: "images/portfolio/Architecture/img_001.jpg",
+    type: "image"
+  },
+  {
+    id: 12,
+    title: "Architecture 2",
+    category: "architecture",
+    date: "2023-02-20",
+    thumb: "images/portfolio/Architecture/thumb/img_002.jpg",
+    full: "images/portfolio/Architecture/img_002.jpg",
+    type: "image"
+  },
+  {
+    id: 13,
+    title: "Architecture 3",
+    category: "architecture",
+    date: "2023-03-15",
+    thumb: "images/portfolio/Architecture/thumb/img_003.jpg",
+    full: "images/portfolio/Architecture/img_003.jpg",
+    type: "image"
+  },
+  {
+    id: 14,
+    title: "Architecture 4",
+    category: "architecture",
+    date: "2023-04-05",
+    thumb: "images/portfolio/Architecture/thumb/img_004.jpg",
+    full: "images/portfolio/Architecture/img_004.jpg",
+    type: "image"
+  },
+  {
+    id: 15,
+    title: "Architecture 5",
+    category: "architecture",
+    date: "2023-05-12",
+    thumb: "images/portfolio/Architecture/thumb/img_005.jpg",
+    full: "images/portfolio/Architecture/img_005.jpg",
+    type: "image"
+  },
+  {
+    id: 16,
+    title: "Architecture 6",
+    category: "architecture",
+    date: "2023-06-08",
+    thumb: "images/portfolio/Architecture/thumb/img_006.jpg",
+    full: "images/portfolio/Architecture/img_006.jpg",
+    type: "image"
+  },
+  {
+    id: 17,
+    title: "Architecture 7",
+    category: "architecture",
+    date: "2023-07-22",
+    thumb: "images/portfolio/Architecture/thumb/img_007.jpg",
+    full: "images/portfolio/Architecture/img_007.jpg",
+    type: "image"
+  },
+  {
+    id: 18,
+    title: "Architecture 8",
+    category: "architecture",
+    date: "2023-08-15",
+    thumb: "images/portfolio/Architecture/thumb/img_008.jpg",
+    full: "images/portfolio/Architecture/img_008.jpg",
+    type: "image"
+  },
+
+  // Art
+  {
+    id: 18,
+    title: "Art Video",
+    category: "art",
+    date: "2023-03-10",
+    thumb: "images/portfolio/Art/thumb/img_001.jpg",
+    full: "images/portfolio/Art/img_001.mp4",
+    type: "video"
+  },
+
+  // Freelance
+  {
+    id: 20,
+    title: "Freelance 1",
+    category: "freelance",
+    date: "2023-01-08",
+    thumb: "images/portfolio/Freelance/thumb/img_001.jpg",
+    full: "images/portfolio/Freelance/img_001.jpg",
+    type: "image"
+  },
+  {
+    id: 21,
+    title: "Freelance 2",
+    category: "freelance",
+    date: "2023-02-18",
+    thumb: "images/portfolio/Freelance/thumb/img_002.jpg",
+    full: "images/portfolio/Freelance/img_002.jpg",
+    type: "image"
+  },
+  {
+    id: 22,
+    title: "Freelance 3",
+    category: "freelance",
+    date: "2023-03-12",
+    thumb: "images/portfolio/Freelance/thumb/img_003.jpg",
+    full: "images/portfolio/Freelance/img_003.jpg",
+    type: "image"
+  },
+  {
+    id: 23,
+    title: "Freelance 4",
+    category: "freelance",
+    date: "2023-04-25",
+    thumb: "images/portfolio/Freelance/thumb/img_004.jpg",
+    full: "images/portfolio/Freelance/img_004.jpg",
+    type: "image"
+  },
+  {
+    id: 24,
+    title: "Freelance 5",
+    category: "freelance",
+    date: "2023-05-18",
+    thumb: "images/portfolio/Freelance/thumb/img_005.jpg",
+    full: "images/portfolio/Freelance/img_005.jpg",
+    type: "image"
+  },
+  {
+    id: 25,
+    title: "Freelance 6",
+    category: "freelance",
+    date: "2023-06-05",
+    thumb: "images/portfolio/Freelance/thumb/img_006.jpg",
+    full: "images/portfolio/Freelance/img_006.jpg",
+    type: "image"
+  },
+  {
+    id: 26,
+    title: "Freelance 7",
+    category: "freelance",
+    date: "2023-07-15",
+    thumb: "images/portfolio/Freelance/thumb/img_007.jpg",
+    full: "images/portfolio/Freelance/img_007.jpg",
+    type: "image"
+  },
+  {
+    id: 27,
+    title: "Freelance 8",
+    category: "freelance",
+    date: "2023-08-20",
+    thumb: "images/portfolio/Freelance/thumb/img_008.jpg",
+    full: "images/portfolio/Freelance/img_008.jpg",
+    type: "image"
+  },
+  {
+    id: 28,
+    title: "Freelance 9",
+    category: "freelance",
+    date: "2023-09-08",
+    thumb: "images/portfolio/Freelance/thumb/img_009.jpg",
+    full: "images/portfolio/Freelance/img_009.jpg",
+    type: "image"
+  },
+  {
+    id: 29,
+    title: "Freelance 10",
+    category: "freelance",
+    date: "2023-10-20",
+    thumb: "images/portfolio/Freelance/thumb/img_010.jpg",
+    full: "images/portfolio/Freelance/img_010.jpg",
+    type: "image"
+  },
+  {
+    id: 30,
+    title: "Freelance 11",
+    category: "freelance",
+    date: "2023-11-05",
+    thumb: "images/portfolio/Freelance/thumb/img_011.jpg",
+    full: "images/portfolio/Freelance/img_011.jpg",
+    type: "image"
+  },
+  {
+    id: 31,
+    title: "Freelance 12",
+    category: "freelance",
+    date: "2023-11-15",
+    thumb: "images/portfolio/Freelance/thumb/img_012.jpg",
+    full: "images/portfolio/Freelance/img_012.jpg",
+    type: "image"
+  },
+  {
+    id: 32,
+    title: "Freelance 13",
+    category: "freelance",
+    date: "2023-12-01",
+    thumb: "images/portfolio/Freelance/thumb/img_055.jpg",
+    full: "images/portfolio/Freelance/img_055.jpg",
+    type: "image"
+  },
+
+  // Sketching
+  {
+    id: 33,
+    title: "Sketch 1",
+    category: "sketching",
+    date: "2023-01-12",
+    thumb: "images/portfolio/Sketching/thumb/img_001.jpg",
+    full: "images/portfolio/Sketching/img_001.jpg",
+    type: "image"
+  },
+  {
+    id: 34,
+    title: "Sketch 2",
+    category: "sketching",
+    date: "2023-03-08",
+    thumb: "images/portfolio/Sketching/thumb/img_002.jpg",
+    full: "images/portfolio/Sketching/img_002.jpg",
+    type: "image"
+  },
+  {
+    id: 35,
+    title: "Sketch 3",
+    category: "sketching",
+    date: "2023-05-20",
+    thumb: "images/portfolio/Sketching/thumb/img_003.jpg",
+    full: "images/portfolio/Sketching/img_003.jpg",
+    type: "image"
+  },
+  {
+    id: 36,
+    title: "Sketch 4",
+    category: "sketching",
+    date: "2023-08-10",
+    thumb: "images/portfolio/Sketching/thumb/img_004.jpg",
+    full: "images/portfolio/Sketching/img_004.jpg",
+    type: "image"
+  },
+  {
+    id: 37,
+    title: "Sketch 5",
+    category: "sketching",
+    date: "2023-10-05",
+    thumb: "images/portfolio/Sketching/thumb/img_005.jpg",
+    full: "images/portfolio/Sketching/img_005.jpg",
+    type: "image"
+  },
+  {
+    id: 38,
+    title: "Sketch 6",
+    category: "sketching",
+    date: "2023-11-15",
+    thumb: "images/portfolio/Sketching/thumb/img_006.jpg",
+    full: "images/portfolio/Sketching/img_006.jpg",
+    type: "image"
+  },
+  {
+    id: 39,
+    title: "Sketch 7",
+    category: "sketching",
+    date: "2023-12-01",
+    thumb: "images/portfolio/Sketching/thumb/img_007.jpg",
+    full: "images/portfolio/Sketching/img_007.jpg",
+    type: "image"
+  },
+  {
+    id: 40,
+    title: "Sketch 8",
+    category: "sketching",
+    date: "2023-12-10",
+    thumb: "images/portfolio/Sketching/thumb/img_008.jpg",
+    full: "images/portfolio/Sketching/img_008.jpg",
+    type: "image"
+  },
+  {
+    id: 41,
+    title: "Sketch 9",
+    category: "sketching",
+    date: "2023-12-15",
+    thumb: "images/portfolio/Sketching/thumb/img_009.jpg",
+    full: "images/portfolio/Sketching/img_009.jpg",
+    type: "image"
+  },
+  {
+    id: 42,
+    title: "Sketch 10",
+    category: "sketching",
+    date: "2023-12-20",
+    thumb: "images/portfolio/Sketching/thumb/img_010.jpg",
+    full: "images/portfolio/Sketching/img_010.jpg",
+    type: "image"
+  },
+  {
+    id: 43,
+    title: "Sketch 11",
+    category: "sketching",
+    date: "2023-12-25",
+    thumb: "images/portfolio/Sketching/thumb/img_011.jpg",
+    full: "images/portfolio/Sketching/img_011.jpg",
+    type: "image"
+  },
+  {
+    id: 44,
+    title: "Sketch 12",
+    category: "sketching",
+    date: "2023-12-28",
+    thumb: "images/portfolio/Sketching/thumb/img_012.jpg",
+    full: "images/portfolio/Sketching/img_012.jpg",
+    type: "image"
+  },
+  {
+    id: 45,
+    title: "Sketch 13",
+    category: "sketching",
+    date: "2023-12-30",
+    thumb: "images/portfolio/Sketching/thumb/img_013.jpg",
+    full: "images/portfolio/Sketching/img_013.jpg",
+    type: "image"
+  },
+  {
+    id: 46,
+    title: "Sketch 14",
+    category: "sketching",
+    date: "2024-01-05",
+    thumb: "images/portfolio/Sketching/thumb/img_014.jpg",
+    full: "images/portfolio/Sketching/img_014.jpg",
+    type: "image"
+  }
+];

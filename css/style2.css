@@ -14,7 +14,8 @@
 }
 .cb-slideshow:after {
     content: '';
-    background: transparent url(../images/pattern.png) repeat top left;
+    /* Background pattern disabled - can be re-enabled by uncommenting the line below */
+    /* background: transparent url(../images/pattern.png) repeat top left; */
 }
 .cb-slideshow li span {
     width: 100%;

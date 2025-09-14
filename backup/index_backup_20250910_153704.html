@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sandeep Tangri - Visionary 3D Artist & Digital Creator. Explore a portfolio of animations, architectural visualizations, and freelance projects.">
+<title>Sandeep Tangri – Digital Visionary & 3D Artist</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap');
+body {
+font-family: 'Montserrat', sans-serif;
+background-color: #0d0d0d;
+color: #e0e0e0;
+}
+.font-display {
+font-family: 'Orbitron', sans-serif;
+}
+.scroll-snap-section {
+scroll-snap-align: start;
+}
+.animated-gradient {
+background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+background-size: 400% 400%;
+animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+.typed-cursor {
+opacity: 1;
+animation: typedjsBlink 0.7s infinite;
+}
+@keyframes typedjsBlink {
+50% { opacity: 0.0; }
+}
+.progress-bar-inner {
+background: linear-gradient(90deg, #6d28d9, #9333ea);
+height: 100%;
+border-radius: 9999px;
+transition: width 1s ease-in-out;
+}
+.portfolio-card {
+position: relative;
+overflow: hidden;
+border-radius: 12px;
+transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.portfolio-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+.portfolio-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.7);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+border-radius: 12px;
+}
+.portfolio-card:hover .portfolio-overlay {
+opacity: 1;
+}
+.video-container {
+position: relative;
+width: 100%;
+padding-bottom: 56.25%; /* 16:9 aspect ratio */
+height: 0;
+overflow: hidden;
+border-radius: 12px;
+}
+.video-container iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+.modal {
+transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.modal.open {
+opacity: 1;
+visibility: visible;
+}
+</style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-950 to-black text-gray-200 antialiased min-h-screen scroll-smooth">
+<!-- Global Navigation -->
+<header class="fixed top-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-sm shadow-lg">
+<nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+<a href="#hero" class="text-3xl font-bold font-display text-purple-400 hover:text-purple-300 transition-colors">
+Sandeep Tangri
+</a>
+<div class="hidden md:flex space-x-8">
+<a href="#about" class="text-lg text-gray-300 hover:text-purple-400 transition-colors">About</a>
+<a href="#skills" class="text-lg text-gray-300 hover:text-purple-400 transition-colors">Expertise</a>
+<a href="#portfolio" class="text-lg text-gray-300 hover:text-purple-400 transition-colors">Works</a>
+<a href="#reel" class="text-lg text-gray-300 hover:text-purple-400 transition-colors">Reel</a>
+<a href="#contact" class="text-lg text-gray-300 hover:text-purple-400 transition-colors">Connect</a>
+</div>
+<button @click="open = !open" class="md:hidden text-gray-300 hover:text-purple-400 focus:outline-none">
+<span class="sr-only">Open main menu</span>
+<i data-lucide="menu" class="w-8 h-8"></i>
+</button>
+</nav>
+<!-- Mobile Menu -->
+<div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4"
+class="md:hidden bg-gray-900 absolute w-full py-4 space-y-2 border-t border-gray-700">
+<a href="#about" @click="open = false" class="block px-6 py-2 text-lg text-gray-300 hover:text-purple-400 hover:bg-gray-800 transition-colors">About</a>
+<a href="#skills" @click="open = false" class="block px-6 py-2 text-lg text-gray-300 hover:text-purple-400 hover:bg-gray-800 transition-colors">Expertise</a>
+<a href="#portfolio" @click="open = false" class="block px-6 py-2 text-lg text-gray-300 hover:text-purple-400 hover:bg-gray-800 transition-colors">Works</a>
+<a href="#reel" @click="open = false" class="block px-6 py-2 text-lg text-gray-300 hover:text-purple-400 hover:bg-gray-800 transition-colors">Reel</a>
+<a href="#contact" @click="open = false" class="block px-6 py-2 text-lg text-gray-300 hover:text-purple-400 hover:bg-gray-800 transition-colors">Connect</a>
+</div>
+</header> 
+
+<main x-data="{ open: false }">
+<!-- Hero Section -->
+<section id="hero" class="relative h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-indigo-950 to-gray-950">
+<div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://source.unsplash.com/random/1920x1080/?abstract-3d,dark-galaxy');"></div>
+<div class="relative z-10 p-8 max-w-4xl mx-auto">
+<h1 class="text-6xl md:text-8xl font-display font-bold text-transparent bg-clip-text animated-gradient leading-tight mb-4">
+Sandeep Tangri
+</h1>
+<p class="text-3xl md:text-4xl text-gray-300 mb-8">
+I'm a <span id="typed-text" class="text-purple-300 font-semibold"></span>
+</p>
+<div class="flex justify-center space-x-6 text-purple-400">
+<a href="https://twitter.com/lonely_woods" target="_blank" class="hover:text-purple-200 transition-colors"><i data-lucide="twitter" class="w-8 h-8"></i><span class="sr-only">Twitter</span></a>
+<a href="https://www.facebook.com/sandeep.tangri" target="_blank" class="hover:text-purple-200 transition-colors"><i data-lucide="facebook" class="w-8 h-8"></i><span class="sr-only">Facebook</span></a>
+<a href="https://www.instagram.com/sandeeptangri/" target="_blank" class="hover:text-purple-200 transition-colors"><i data-lucide="instagram" class="w-8 h-8"></i><span class="sr-only">Instagram</span></a>
+<a href="https://www.linkedin.com/in/sandeeptangri/" target="_blank" class="hover:text-purple-200 transition-colors"><i data-lucide="linkedin" class="w-8 h-8"></i><span class="sr-only">LinkedIn</span></a>
+</div>
+</div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 md:py-32 bg-gray-900 scroll-snap-section relative overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-center opacity-5">
+<i data-lucide="cube" class="w-72 h-72 text-purple-800/20 animate-spin-slow"></i>
+</div>
+<div class="container mx-auto px-6 relative z-10">
+<h2 class="text-5xl font-bold font-display text-center text-purple-400 mb-16">About Me</h2>
+<div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+<div class="lg:w-1/3 flex-shrink-0">
+<div class="w-64 h-64 rounded-full bg-gray-700 flex items-center justify-center overflow-hidden shadow-xl border-4 border-purple-500 mx-auto lg:mx-0">
+<span class="text-gray-400 text-sm">Avatar Placeholder</span>
+<!-- Replace with actual avatar image if available, e.g., <img src="images/avatar.jpg" alt="Sandeep Tangri" class="w-full h-full object-cover"> -->
+</div>
+</div>
+<div class="lg:w-2/3 text-lg space-y-6">
+<h3 class="text-3xl font-display font-semibold text-gray-100">Visionary 3D Artist & Digital Innovator</h3>
+<p class="text-gray-300 leading-relaxed">
+I am a passionate 3D artist with over 15 years of immersive experience in 3D design, visualization, and rendering. My journey has been defined by a relentless pursuit of excellence, collaborating with diverse global teams and leading brands to push the boundaries of visual storytelling. I've consistently driven improvements in project delivery times by over 20% and elevated visual quality by an impressive 30%.
+</p>
+<p class="text-gray-300 leading-relaxed">
+My expertise spans a wide array of industries, including animation, architectural visualization, and product design. I specialize in the intricate arts of lighting, rendering, and compositing, bringing a unique blend of technical precision and creative artistry to every project. Beyond the technical, I'm committed to mentorship, optimizing workflows, and guiding projects from initial concept to a stunning, polished completion.
+</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-gray-300 mt-8">
+<div><strong>Birthday:</strong> <span class="text-purple-300">22 March</span></div>
+<div><strong>Website:</strong> <a href="#" class="text-purple-300 hover:underline">www.sandeeptangri.com</a></div>
+<div><strong>Whatsapp:</strong> <span class="text-purple-300">+91 9717868495</span></div>
+<div><strong>Hometown:</strong> <span class="text-purple-300">Ludhiana, Punjab</span></div>
+<div><strong>Languages:</strong> <span class="text-purple-300">Punjabi, Hindi, English</span></div>
+<div><strong>Degree:</strong> <span class="text-purple-300">Computer Science</span></div>
+<div><strong>Email:</strong> <a href="mailto:sandeeptangri@gmail.com" class="text-purple-300 hover:underline">sandeeptangri@gmail.com</a></div>
+<div><strong>Freelance:</strong> <span class="text-purple-300">Available</span></div>
+</div>
+</div>
+</div>
+</div>
+</section> 
+  
+  <!-- Skills Section -->
+<section id="skills" class="py-20 md:py-32 bg-gray-950 scroll-snap-section">
+<div class="container mx-auto px-6">
+<h2 class="text-5xl font-bold font-display text-center text-purple-400 mb-16">Core Expertise & Software Skills</h2>
+<p class="text-center text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+A blend of technical mastery and creative intuition, driving impactful visual experiences across diverse platforms.
+</p>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- 3D & Creative Software -->
+<div class="space-y-6">
+<h3 class="text-3xl font-display font-semibold text-gray-100 mb-6 border-b-2 border-purple-600 pb-2">3D & Creative Suites</h3>
+<div class="space-y-4">
+<!-- Skill 1 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">Autodesk 3ds Max</span>
+<span class="text-lg text-purple-300 font-semibold">100%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Skill 2 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">Autodesk Maya</span>
+<span class="text-lg text-purple-300 font-semibold">90%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 90%;"></div>
+</div>
+</div>
+<!-- Skill 3 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">Adobe Photoshop</span>
+<span class="text-lg text-purple-300 font-semibold">95%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 95%;"></div>
+</div>
+</div>
+<!-- Skill 4 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">Adobe After Effects</span>
+<span class="text-lg text-purple-300 font-semibold">80%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 80%;"></div>
+</div>
+</div>
+<!-- Skill 5 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">Fusion</span>
+<span class="text-lg text-purple-300 font-semibold">60%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 60%;"></div>
+</div>
+</div>
+<!-- Skill 6 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">Chaos V-Ray</span>
+<span class="text-lg text-purple-300 font-semibold">90%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 90%;"></div>
+</div>
+</div>
+<!-- Skill 7 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">Mental Ray</span>
+<span class="text-lg text-purple-300 font-semibold">85%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 85%;"></div>
+</div>
+</div>
+<!-- Skill 8 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">Deadline Renderfarm</span>
+<span class="text-lg text-purple-300 font-semibold">75%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Development & Scripting -->
+<div class="space-y-6">
+<h3 class="text-3xl font-display font-semibold text-gray-100 mb-6 border-b-2 border-purple-600 pb-2">Development & Scripting</h3>
+<div class="space-y-4">
+<!-- Skill 1 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">HTML</span>
+<span class="text-lg text-purple-300 font-semibold">80%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 80%;"></div>
+</div>
+</div>
+<!-- Skill 2 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">Javascript</span>
+<span class="text-lg text-purple-300 font-semibold">90%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 90%;"></div>
+</div>
+</div>
+<!-- Skill 3 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">Dreamweaver</span>
+<span class="text-lg text-purple-300 font-semibold">65%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 65%;"></div>
+</div>
+</div>
+<!-- Skill 4 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">CSS</span>
+<span class="text-lg text-purple-300 font-semibold">65%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 65%;"></div>
+</div>
+</div>
+<!-- Skill 5 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">C++</span>
+<span class="text-lg text-purple-300 font-semibold">70%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 70%;"></div>
+</div>
+</div>
+<!-- Skill 6 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-lg text-gray-300">Python</span>
+<span class="text-lg text-purple-300 font-semibold">75%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="progress-bar-inner" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section> 
+  
+  <!-- Resume Section -->
+<section id="resume" class="py-20 md:py-32 bg-gray-900 scroll-snap-section">
+<div class="container mx-auto px-6">
+<h2 class="text-5xl font-bold font-display text-center text-purple-400 mb-16">Career Journey</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Education Column -->
+<div>
+<h3 class="text-3xl font-display font-semibold text-gray-100 mb-8 border-b-2 border-purple-600 pb-2">Education</h3>
+<div class="bg-gray-800 p-8 rounded-xl shadow-lg mb-8 border border-gray-700 hover:border-purple-500 transition-all duration-300">
+<h4 class="text-2xl font-semibold text-purple-300 mb-2">Diploma in Animation</h4>
+<p class="text-gray-400 mb-3"><span class="font-medium">2006 - 2007</span> | Frameboxx Animation, Ludhiana, Punjab</p>
+<p class="text-gray-300 leading-relaxed">Completed a 1-year diploma program, gaining hands-on experience and working on live 3D projects that honed my practical skills in animation and visual design.</p>
+</div>
+<div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
+<h4 class="text-2xl font-semibold text-purple-300 mb-2">Diploma in Software & Web Development</h4>
+<p class="text-gray-400 mb-3"><span class="font-medium">2001 - 2003</span> | Software Solutions Integrated Ltd, Ludhiana, Punjab</p>
+<p class="text-gray-300 leading-relaxed">A comprehensive 2-year diploma focused on programming languages, modern web development practices, and robust database systems, providing a strong technical foundation.</p>
+</div>
+</div>
+<!-- Professional Experience Column -->
+<div>
+<h3 class="text-3xl font-display font-semibold text-gray-100 mb-8 border-b-2 border-purple-600 pb-2">Professional Experience</h3>
+<div class="bg-gray-800 p-8 rounded-xl shadow-lg mb-8 border border-gray-700 hover:border-purple-500 transition-all duration-300">
+<h4 class="text-2xl font-semibold text-purple-300 mb-2">Senior 3D Visualization Artist</h4>
+<p class="text-gray-400 mb-3"><span class="font-medium">2016 - Present</span> | SGK, Penang, Malaysia</p>
+<ul class="list-disc list-inside text-gray-300 space-y-2 leading-relaxed">
+<li>Collaborated extensively with a professional Branding Designer Team to create highly appealing 3D renders of various products, driving visual impact.</li>
+<li>Executed the meticulous realization of 3D renders, material creation, and texturing, adhering strictly to technical drawings and design specifications.</li>
+<li>Spearheaded innovative solutions to enhance visual quality and streamline production pipelines for client projects.</li>
+</ul>
+</div>
+<div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
+<h4 class="text-2xl font-semibold text-purple-300 mb-2">3D Generalist</h4>
+<p class="text-gray-400 mb-3"><span class="font-medium">2015 - 2016</span> | ADI Backoffice, Chandigarh, Punjab</p>
+<ul class="list-disc list-inside text-gray-300 space-y-2 leading-relaxed">
+<li>Developed and contributed to various 3D projects within the medical industry, showcasing versatility and precision.</li>
+<li>Successfully managed up to 5 concurrent projects under demanding deadlines, demonstrating strong organizational and time-management skills.</li>
+<li>Provided expert recommendations and consultations to clients on optimal 3D rendering strategies during the production phase.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section> 
+  
+  <!-- Portfolio Section -->
+<section id="portfolio" class="py-20 md:py-32 bg-gray-950 scroll-snap-section">
+<div class="container mx-auto px-6">
+<h2 class="text-5xl font-bold font-display text-center text-purple-400 mb-16">Featured Creations</h2>
+<p class="text-center text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+A curated collection showcasing the depth and breadth of my 3D artistry across animation, architecture, and more.
+</p>
+<div x-data="{ activeFilter: 'all' }" class="mb-12">
+<div class="flex flex-wrap justify-center gap-4 mb-8">
+<button @click="activeFilter = 'all'" :class="{'bg-purple-600 text-white': activeFilter === 'all', 'bg-gray-700 text-gray-300 hover:bg-gray-600': activeFilter !== 'all'}" class="px-6 py-2 rounded-full text-lg font-medium transition-colors">All</button>
+<button @click="activeFilter = 'art'" :class="{'bg-purple-600 text-white': activeFilter === 'art', 'bg-gray-700 text-gray-300 hover:bg-gray-600': activeFilter !== 'art'}" class="px-6 py-2 rounded-full text-lg font-medium transition-colors">Art</button>
+<button @click="activeFilter = 'animation'" :class="{'bg-purple-600 text-white': activeFilter === 'animation', 'bg-gray-700 text-gray-300 hover:bg-gray-600': activeFilter !== 'animation'}" class="px-6 py-2 rounded-full text-lg font-medium transition-colors">Animation</button>
+<button @click="activeFilter = 'architecture'" :class="{'bg-purple-600 text-white': activeFilter === 'architecture', 'bg-gray-700 text-gray-300 hover:bg-gray-600': activeFilter !== 'architecture'}" class="px-6 py-2 rounded-full text-lg font-medium transition-colors">Architecture</button>
+<button @click="activeFilter = 'sketching'" :class="{'bg-purple-600 text-white': activeFilter === 'sketching', 'bg-gray-700 text-gray-300 hover:bg-gray-600': activeFilter !== 'sketching'}" class="px-6 py-2 rounded-full text-lg font-medium transition-colors">Sketching</button>
+<button @click="activeFilter = 'freelance'" :class="{'bg-purple-600 text-white': activeFilter === 'freelance', 'bg-gray-700 text-gray-300 hover:bg-gray-600': activeFilter !== 'freelance'}" class="px-6 py-2 rounded-full text-lg font-medium transition-colors">Freelance</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Portfolio Item Template -->
+<template x-if="activeFilter === 'all' || activeFilter === 'animation'">
+<div class="portfolio-card bg-gray-800 shadow-xl border border-gray-700">
+<div class="w-full h-64 bg-gray-700 flex items-center justify-center text-gray-400 text-sm overflow-hidden rounded-t-xl">
+<span class="p-4">Animation Thumbnail 1</span>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-semibold text-gray-100 mb-2">Earthlings.</h4>
+<p class="text-gray-400">Character animation and environmental design.</p>
+</div>
+<div class="portfolio-overlay">
+<button @click="$dispatch('open-modal', {src: 'https://player.vimeo.com/video/17021167?h=e9c4bdcda7', title: 'Earthlings.', type: 'vimeo'})" class="p-4 rounded-full bg-purple-600 hover:bg-purple-700 transition-colors">
+<i data-lucide="play" class="w-6 h-6 text-white"></i>
+</button>
+</div>
+</div>
+</template>
+<template x-if="activeFilter === 'all' || activeFilter === 'animation'">
+<div class="portfolio-card bg-gray-800 shadow-xl border border-gray-700">
+<div class="w-full h-64 bg-gray-700 flex items-center justify-center text-gray-400 text-sm overflow-hidden rounded-t-xl">
+<span class="p-4">Animation Thumbnail 2</span>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-semibold text-gray-100 mb-2">Meri Bhains Ko Anda Kyun Mara.</h4>
+<p class="text-gray-400">Vibrant character design and animated shorts.</p>
+</div>
+<div class="portfolio-overlay">
+<button @click="$dispatch('open-modal', {src: 'images/portfolio/Animation/img_002.jpg', title: 'Meri Bhains Ko Anda Kyun Mara.', type: 'image'})" class="p-4 rounded-full bg-purple-600 hover:bg-purple-700 transition-colors">
+<i data-lucide="maximize" class="w-6 h-6 text-white"></i>
+</button>
+</div>
+</div>
+</template>
+<template x-if="activeFilter === 'all' || activeFilter === 'architecture'">
+<div class="portfolio-card bg-gray-800 shadow-xl border border-gray-700">
+<div class="w-full h-64 bg-gray-700 flex items-center justify-center text-gray-400 text-sm overflow-hidden rounded-t-xl">
+<span class="p-4">Architecture Thumbnail 1</span>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-semibold text-gray-100 mb-2">Interior Design Showcase</h4>
+<p class="text-gray-400">Detailed rendering of modern living spaces.</p>
+</div>
+<div class="portfolio-overlay">
+<button @click="$dispatch('open-modal', {src: 'images/portfolio/Architecture/img_001.jpg', title: 'Interior Design Showcase', type: 'image'})" class="p-4 rounded-full bg-purple-600 hover:bg-purple-700 transition-colors">
+<i data-lucide="maximize" class="w-6 h-6 text-white"></i>
+</button>
+</div>
+</div>
+</template>
+<template x-if="activeFilter === 'all' || activeFilter === 'art'">
+<div class="portfolio-card bg-gray-800 shadow-xl border border-gray-700">
+<div class="w-full h-64 bg-gray-700 flex items-center justify-center text-gray-400 text-sm overflow-hidden rounded-t-xl">
+<span class="p-4">Art Piece Thumbnail</span>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-semibold text-gray-100 mb-2">Buddha's Hand.</h4>
+<p class="text-gray-400">Sculptural art piece rendered with delicate lighting.</p>
+</div>
+<div class="portfolio-overlay">
+<button @click="$dispatch('open-modal', {src: 'images/portfolio/Art/img_001.mp4', title: 'Buddha\'s Hand.', type: 'video'})" class="p-4 rounded-full bg-purple-600 hover:bg-purple-700 transition-colors">
+<i data-lucide="play" class="w-6 h-6 text-white"></i>
+</button>
+</div>
+</div>
+</template>
+<template x-if="activeFilter === 'all' || activeFilter === 'freelance'">
+<div class="portfolio-card bg-gray-800 shadow-xl border border-gray-700">
+<div class="w-full h-64 bg-gray-700 flex items-center justify-center text-gray-400 text-sm overflow-hidden rounded-t-xl">
+<span class="p-4">Freelance Project 1</span>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-semibold text-gray-100 mb-2">3D Glasses.</h4>
+<p class="text-gray-400">Precision product visualization for commercial use.</p>
+</div>
+<div class="portfolio-overlay">
+<button @click="$dispatch('open-modal', {src: 'images/portfolio/Freelance/img_001.jpg', title: '3D Glasses.', type: 'image'})" class="p-4 rounded-full bg-purple-600 hover:bg-purple-700 transition-colors">
+<i data-lucide="maximize" class="w-6 h-6 text-white"></i>
+</button>
+</div>
+</div>
+</template>
+<template x-if="activeFilter === 'all' || activeFilter === 'sketching'">
+<div class="portfolio-card bg-gray-800 shadow-xl border border-gray-700">
+<div class="w-full h-64 bg-gray-700 flex items-center justify-center text-gray-400 text-sm overflow-hidden rounded-t-xl">
+<span class="p-4">Sketching Project 1</span>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-semibold text-gray-100 mb-2">Character Sketch</h4>
+<p class="text-gray-400">Early conceptualization of character forms.</p>
+</div>
+<div class="portfolio-overlay">
+<button @click="$dispatch('open-modal', {src: 'images/portfolio/Sketching/img_001.jpg', title: 'Character Sketch', type: 'image'})" class="p-4 rounded-full bg-purple-600 hover:bg-purple-700 transition-colors">
+<i data-lucide="maximize" class="w-6 h-6 text-white"></i>
+</button>
+</div>
+</div>
+</template>
+<!-- Add more portfolio items as needed, duplicating the template and adjusting content -->
+</div>
+</div>
+<!-- Portfolio Modal -->
+<div x-data="{ open: false, src: '', title: '', type: '' }"
+@open-modal.window="open = true; src = $event.detail.src; title = $event.detail.title; type = $event.detail.type;"
+x-show="open"
+class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-80 transition-opacity duration-300"
+x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+@click.away="open = false">
+<div class="relative bg-gray-900 rounded-lg p-6 max-w-4xl w-full mx-auto shadow-2xl" @click.stop>
+<button @click="open = false" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+<i data-lucide="x" class="w-8 h-8"></i>
+<span class="sr-only">Close modal</span>
+</button>
+<h3 x-text="title" class="text-3xl font-display font-semibold text-purple-400 mb-6 border-b border-gray-700 pb-3"></h3>
+<div class="video-container">
+<template x-if="type === 'vimeo'">
+<iframe :src="src + '&autoplay=1'" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</template>
+<template x-if="type === 'image'">
+<img :src="src" :alt="title" class="w-full h-full object-contain rounded-lg">
+</template>
+<template x-if="type === 'video'">
+<video :src="src" controls class="w-full h-full object-contain rounded-lg"></video>
+</template>
+</div>
+</div>
+</div>
+</div>
+</section>"portfolio-lightbox" title="Exterior Visualisation."><i class="bx bx-plus"></i></a> 
+              <!--<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Architecture/thumb/img_007.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Architecture/img_007.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Exterior Visualisation."><i class="bx bx-plus"></i></a> 
+              <!--<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Architecture/thumb/img_008.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Architecture/img_008.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Kitchen Interior Visualisation."><i class="bx bx-plus"></i></a> 
+              <!--<a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-art">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Art/thumb/img_001.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Art/img_001.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Buddha's Hand."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_001.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Glasses."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_002.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Alexanderia Chair."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_003.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_003.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="BMW 3D"><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_004.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Product 3D."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_005.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_005.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Lego."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_006.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_006.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D BG Modeling."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_007.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_007.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Octopus for Gaming."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_008.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_008.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Product."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_009.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_009.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Wedding Rings."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_010.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_010.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_011.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_011.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_012.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_012.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Freelance/thumb/img_055.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Freelance/img_055.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Dracula for Game."><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_001.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_002.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_003.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_003.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_004.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_005.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_005.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_006.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_006.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_007.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_007.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_008.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_008.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_009.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_009.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_010.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_010.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_011.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_011.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_012.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_012.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_013.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_013.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching">
+          <div class="portfolio-wrap"> <img src="images/portfolio/Sketching/thumb/img_014.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links"> <a href="images/portfolio/Sketching/img_014.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a> 
+              <!--  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>--> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Portfolio Section --> 
+  
+  <!-- Demoreel & Breakdown Section -->
+<section id="reel" class="py-20 md:py-32 bg-gray-900 scroll-snap-section">
+<div class="container mx-auto px-6">
+<h2 class="text-5xl font-bold font-display text-center text-purple-400 mb-16">Immersive Demoreel & Breakdowns</h2>
+<p class="text-center text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+Experience my passion in motion – a compilation of my finest 3D works and a glimpse into the intricate process behind them.
+</p>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Demoreel -->
+<div class="space-y-6">
+<h3 class="text-3xl font-display font-semibold text-gray-100 mb-6 border-b-2 border-purple-600 pb-2">My Creative Reel</h3>
+<div class="video-container shadow-xl border border-gray-700">
+<iframe src="https://player.vimeo.com/video/17153265?h=e9c4bdcda7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Maya Lighting Demoreel"></iframe>
+</div>
+<p class="text-gray-400 text-center pt-4">A showcase of lighting, rendering, and compositing mastery.</p>
+</div>
+<!-- Breakdown -->
+<div class="space-y-6">
+<h3 class="text-3xl font-display font-semibold text-gray-100 mb-6 border-b-2 border-purple-600 pb-2">Behind the Scenes: Shot Breakdowns</h3>
+<div class="space-y-8">
+<div class="video-container shadow-xl border border-gray-700">
+<iframe src="https://player.vimeo.com/video/174074282?h=bfc863f9ac&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Sundial Shot Compositing."></iframe>
+</div>
+<div class="video-container shadow-xl border border-gray-700">
+<iframe src="https://player.vimeo.com/video/174074357?h=05d4d70d45&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Eleven Second Shot Compositing."></iframe>
+</div>
+</div>
+<p class="text-gray-400 text-center pt-4">Diving deep into the technical and creative processes.</p>
+</div>
+</div>
+</div>
+</section> 
+  
+  <!-- Contact Section -->
+<section id="contact" class="py-20 md:py-32 bg-gray-950 scroll-snap-section">
+<div class="container mx-auto px-6">
+<h2 class="text-5xl font-bold font-display text-center text-purple-400 mb-16">Let's Connect & Create</h2>
+<p class="text-center text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+Whether you have a project in mind, a question, or just want to say hello, I'd love to hear from you.
+</p>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<!-- Contact Info -->
+<div class="space-y-8 bg-gray-800 p-10 rounded-xl shadow-xl border border-gray-700">
+<div class="flex items-center space-x-4">
+<i data-lucide="map-pin" class="w-8 h-8 text-purple-400 flex-shrink-0"></i>
+<div>
+<h4 class="text-xl font-semibold text-gray-100">Location:</h4>
+<p class="text-gray-300">Kuala Lumpur, MALAYSIA</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<i data-lucide="mail" class="w-8 h-8 text-purple-400 flex-shrink-0"></i>
+<div>
+<h4 class="text-xl font-semibold text-gray-100">Email:</h4>
+<a href="mailto:sandeeptangri@gmail.com" class="text-purple-300 hover:underline">sandeeptangri@gmail.com</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<i data-lucide="phone" class="w-8 h-8 text-purple-400 flex-shrink-0"></i>
+<div>
+<h4 class="text-xl font-semibold text-gray-100">Call or WhatsApp:</h4>
+<a href="tel:+919717868495" class="text-purple-300 hover:underline">+91 9717868495</a>
+</div>
+</div>
+<div class="video-container shadow-inner border border-gray-600 rounded-lg">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127482.66722782142!2d101.6169493970083!3d3.138674969062989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49c701efeae7%3A0xf4d98e5b2f1c287d!2sKuala%20Lumpur%2C%20Federal%20Territory%20of%20Kuala%20Lumpur%2C%20Malaysia!5e0!3m2!1sen!2sin!4v1657446358736!5m2!1sen%2Cin" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="bg-gray-800 p-10 rounded-xl shadow-xl border border-gray-700">
+<form id="contact-form" action="https://formspree.io/f/mvgpjgrd" method="POST" class="space-y-6">
+<div>
+<label for="name" class="block text-gray-300 text-lg font-medium mb-2">Your Name</label>
+<input type="text" name="name" id="name" required class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-200">
+</div>
+<div>
+<label for="email" class="block text-gray-300 text-lg font-medium mb-2">Your Email</label>
+<input type="email" name="email" id="email" required class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-200">
+</div>
+<div>
+<label for="subject" class="block text-gray-300 text-lg font-medium mb-2">Subject</label>
+<input type="text" name="subject" id="subject" required class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-200">
+</div>
+<div>
+<label for="message" class="block text-gray-300 text-lg font-medium mb-2">Message</label>
+<textarea name="message" id="message" rows="7" required class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-200"></textarea>
+</div>
+<div class="text-center">
+<button type="submit" class="animated-gradient text-white px-8 py-4 rounded-full text-xl font-bold hover:shadow-lg transition-all duration-300 ease-in-out">
+Send Message
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Modal -->
+<div x-data="{ showSuccess: false }"
+@form-success.window="showSuccess = true; setTimeout(() => showSuccess = false, 3000)"
+x-show="showSuccess"
+x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+class="fixed bottom-8 right-8 z-50 bg-green-700 text-white p-6 rounded-lg shadow-lg flex items-center space-x-3"
+style="display: none;">
+<i data-lucide="check-circle" class="w-6 h-6"></i>
+<p>Your message has been sent. Thank you!</p>
+</div>
+<!-- Error Modal -->
+<div x-data="{ showError: false }"
+@form-error.window="showError = true; setTimeout(() => showError = false, 3000)"
+x-show="showError"
+x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
+class="fixed bottom-8 right-8 z-50 bg-red-700 text-white p-6 rounded-lg shadow-lg flex items-center space-x-3"
+style="display: none;">
+<i data-lucide="x-circle" class="w-6 h-6"></i>
+<p>There was an error sending your message. Please try again.</p>
+</div> 
+  
+</main>
+<footer class="bg-gray-900 py-12 border-t border-gray-800 text-gray-400 text-center">
+<div class="container mx-auto px-6">
+<p>&copy; 2024 Sandeep Tangri. All rights reserved.</p>
+<p class="mt-4">Designed with passion and precision.</p>
+</div>
+</footer>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+lucide.createIcons();
+const typed = new Typed('#typed-text', {
+strings: ['3D Artist.', 'Web Developer.', 'Freelancer.', 'Photographer.', 'Digital Creative.'],
+typeSpeed: 70,
+backSpeed: 40,
+loop: true,
+showCursor: true,
+cursorChar: '|',
+});
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+event.preventDefault(); // Prevent the default form submission behavior
+const form = event.target;
+fetch(form.action, {
+method: form.method,
+body: new FormData(form),
+headers: {
+'Accept': 'application/json'
+}
+}).then(function(response) {
+if (response.ok) {
+window.dispatchEvent(new CustomEvent('form-success'));
+form.reset();
+} else {
+window.dispatchEvent(new CustomEvent('form-error'));
+}
+}).catch(function(error) {
+window.dispatchEvent(new CustomEvent('form-error'));
+console.error('Form submission failed:', error);
+});
+});
+});
+</script>
+</body>
+</html>

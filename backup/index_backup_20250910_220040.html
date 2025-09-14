@@ -1,0 +1,1395 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your page description here">
+<!-- Title of the webpage -->
+<title>Sandeep Tangri - 3D Artist</title>
+<!-- Favicon icon -->
+<!-- The "href" should point to the location of your favicon file -->
+<link rel="icon" type="image/x-icon" sizes="16x16" href="images/favicon.ico">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link href="css/style2.css" rel="stylesheet" type="text/css">
+<link href="css/demo.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/iportfolio_style.css" rel="stylesheet" type="text/css">
+<link href="css/glightbox.min.css" rel="stylesheet" type="text/css">
+<link href="css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+<link href="js/boxicons/css/boxicons.min.css" rel="stylesheet" type="text/css">
+		   <!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6Y8SYGHTX7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6Y8SYGHTX7');
+</script>
+
+<script>
+	// When the user scrolls down 100px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      document.getElementById("mainNavbar").style.padding = "0px 0px";
+	  document.getElementById("mainNavbar").style.backgroundColor = "rgba(0,0,0,0.8)";
+    document.querySelector('.cb-slideshow').style.filter = 'blur(8px)';
+    //document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("mainNavbar").style.padding = "25px 0px";
+	document.getElementById("mainNavbar").style.backgroundColor = "rgba(0,0,0,0)";
+  document.querySelector('.cb-slideshow').style.filter = 'blur(0px)';
+    //document.getElementById("logo").style.fontSize = "35px";
+  }
+}
+</script>
+
+   
+
+<style>
+  @media (max-width: 767px) {
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl  {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+</style>
+
+</head>
+
+<body data-spy="scroll" data-target="mainNavbar" data-offset="50">
+
+<!--Slider Slides Start-->
+<ul class="cb-slideshow" style="z-index:-100">
+  <li><span>.navImage 01</span><!--<div><h3>se·ren·i·ty</h3></div>--></li>
+  <li><span>Image 02</span><!--<div><h3>com·po·sure</h3></div>--></li>
+  <li><span>Image 03</span><!--<div><h3>e·qua·nim·i·ty</h3></div>--></li>
+  <li><span>Image 04</span><!--<div><h3>bal·ance</h3></div>--></li>
+  <li><span>Image 05</span><!--<div><h3>qui·e·tude</h3></div>--></li>
+  <li><span>Image 06</span><!--<div><h3>re·lax·a·tion</h3></div>--></li>
+  <li><span>Image 07</span><!--<div><h3>com·po·sure</h3></div>--></li>
+  <li><span>Image 08</span><!--<div><h3>e·qua·nim·i·ty</h3></div>--></li>
+  <li><span>Image 09</span><!--<div><h3>bal·ance</h3></div>--></li>
+</ul>
+<!--Slider Slides End--> 
+
+<!--Navbar Start-->
+<nav class="navbar navbar-expand-lg navbar navbar-dark navbar fixed-top" id="mainNavbar">
+  <div class="container-fluid" style="font-size: 20px"> <a class="navbar-brand" href="#"><img src="images/Logo_002.png" width="177" height="52" alt=""/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-end w-100">
+        <li class="nav-item"> <a class="nav-link" aria-current="page" href="#hero">Home</a></li>
+        <li class="nav-item"> <a class="nav-link" href="#about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#resume">Resume</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#portfolio">Portfolio</a> </li>
+        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Demoreel</a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#services">Reel</a></li>
+            <li><a class="dropdown-item" href="#testimonials">Breakdown</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"> <a class="nav-link " href="#contact">Contact</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--Navbar Stop--> 
+
+<!--Social Icons Start-->
+<!--
+<div class="container-fluid fixed-bottom">
+  <ul class="position pull-right">
+    <a href="https://twitter.com/lonely_woods" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a> <a href="https://www.facebook.com/sandeep.tangri" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a> <a href="https://www.instagram.com/sandeeptangri/" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a> <a href="https://www.linkedin.com/in/sandeeptangri/" class="icon-button linkedin"><i class="fa fa-linkedin"></i><span></span></a>
+  </ul>
+</div>
+-->
+<!--Social Icons End--> 
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <div class="hero-container" data-aos="fade-in">
+    <h1>Sandeep Tangri</h1>
+    <p>I'm <span class="typed" data-typed-items="3D Artist., Web Developer., Freelancer., Photographer."></span></p>
+      <!--Social Icons Start-->
+<div class="d-flex justify-content-center align-items-center">
+  <ul>
+    <a href="https://twitter.com/lonely_woods" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a> <a href="https://www.facebook.com/sandeep.tangri" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a> <a href="https://www.instagram.com/sandeeptangri/" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a> <a href="https://www.linkedin.com/in/sandeeptangri/" class="icon-button linkedin"><i class="fa fa-linkedin"></i><span></span></a>
+  </ul>
+</div>
+<!--Social Icons End--> 
+  </div>
+</section>
+<!-- End Hero -->
+
+<main id="main"> 
+  
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about" style="background-color: #0d0d0d; color: #e0e0e0; padding: 5rem 0;">
+    <div class="container" style="width: 100%; margin: 0 auto; padding: 0 3rem;">
+      <div class="section-title" style="margin-bottom: 2rem; padding-left: 1.5rem;">
+        <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #a78bfa; text-align: left;">About Me</h2>
+      </div>
+      <div class="row" style="align-items: flex-start;">
+        <div class="col-lg-4" data-aos="fade-right" style="margin-bottom: 1.5rem;">
+          <div style="width: 220px; height: 220px; overflow: hidden; border-radius: 50%; margin: 0 auto;">
+            <img src="images/IMG-20191213-WA0000.jpg" class="img-fluid" alt="Sandeep Tangri" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+        <div class="col-lg-8 pt-3 pt-lg-0 content" data-aos="fade-left" style="padding-left: 1.5rem;">
+          <h3 style="font-size: 1.75rem; font-weight: 600; margin-bottom: 0.75rem; color: #ffffff;">Visionary 3D Artist & Digital Innovator</h3>
+          <p style="font-size: 1.05rem; line-height: 1.4; color: #d1d5db; margin-bottom: 0.75rem;">
+            I am a passionate 3D artist with over 15 years of immersive experience in 3D design, visualization, and rendering. My journey has been defined by a relentless pursuit of excellence, collaborating with diverse global teams and leading brands to push the boundaries of visual storytelling. I've consistently driven improvements in project delivery times by over 20% and elevated visual quality by an impressive 30%.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.4; color: #d1d5db; margin-bottom: 0.75rem;">
+            My expertise spans a wide array of industries, including animation, architectural visualization, and product design. I specialize in the intricate arts of lighting, rendering, and compositing, bringing a unique blend of technical precision and creative artistry to every project. Beyond the technical, I'm committed to mentorship, optimizing workflows, and guiding projects from initial concept to a stunning, polished completion.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-8 text-gray-300 mt-6" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem 2rem; margin-top: 1.5rem; color: #d1d5db; font-size: 1.05rem; line-height: 1.4;">
+            <div><strong style="font-weight: 600;">Birthday:</strong> <span style="color: #c4b5fd;">22 March</span></div>
+            <div><strong style="font-weight: 600;">Website:</strong> <a href="#" class="text-purple-300 hover:underline" style="color: #c4b5fd; text-decoration: none;">www.sandeeptangri.com</a></div>
+            <div><strong style="font-weight: 600;">Whatsapp:</strong> <span style="color: #c4b5fd;">+91 9717868495</span></div>
+            <div><strong style="font-weight: 600;">Hometown:</strong> <span style="color: #c4b5fd;">Ludhiana, Punjab</span></div>
+            <div><strong style="font-weight: 600;">Languages:</strong> <span style="color: #c4b5fd;">Punjabi, Hindi, English</span></div>
+            <div><strong style="font-weight: 600;">Degree:</strong> <span style="color: #c4b5fd;">Computer Science</span></div>
+            <div><strong style="font-weight: 600;">Email:</strong> <a href="mailto:sandeeptangri@gmail.com" class="text-purple-300 hover:underline" style="color: #c4b5fd; text-decoration: none;">sandeeptangri@gmail.com</a></div>
+            <div><strong style="font-weight: 600;">Freelance:</strong> <span style="color: #c4b5fd;">Available</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section --> 
+  
+  <!-- ======= Facts Section =======
+    <section id="facts" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Happy Clients</strong> consequuntur quae</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong> adipisci atque cum quia aut</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hard Workers</strong> rerum asperiores dolor</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> End Facts Section --> 
+  
+  <!-- ======= Skills Section ======= -->
+  <section id="skills" class="skills" style="background-color: #0d0d0d; color: #e0e0e0; padding: 5rem 0;">
+    <div class="container" style="width: 100%; margin: 0 auto; padding: 0 3rem;">
+      <div class="section-title" style="margin-bottom: 2rem; padding-left: 1.5rem;">
+        <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #a78bfa; text-align: left;">Skills</h2>
+        <p style="font-size: 1.125rem; color: #9ca3af; max-width: 100%; margin: 0; line-height: 1.5;">I have the following Software skills.</p>
+      </div>
+      <div class="row" style="margin: 0 -0.75rem;">
+        <div class="col-lg-6" data-aos="fade-up" style="padding: 0 0.75rem;">
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">Autodesk 3ds Max</span>
+              <span style="color: #c4b5fd;">100%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 100%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">Autodesk Maya</span>
+              <span style="color: #c4b5fd;">90%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 90%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">Adobe Photoshop</span>
+              <span style="color: #c4b5fd;">95%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 95%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">Adobe After Effects</span>
+              <span style="color: #c4b5fd;">80%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 80%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">Fusion</span>
+              <span style="color: #c4b5fd;">60%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 60%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">Chaos V-Ray</span>
+              <span style="color: #c4b5fd;">90%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 90%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">Mental-Ray</span>
+              <span style="color: #c4b5fd;">85%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 85%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100" style="padding: 0 0.75rem;">
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">Deadline Renderfarm</span>
+              <span style="color: #c4b5fd;">75%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 75%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">HTML</span>
+              <span style="color: #c4b5fd;">80%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 80%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">Javascript</span>
+              <span style="color: #c4b5fd;">90%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 90%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">Dreamweaver</span>
+              <span style="color: #c4b5fd;">65%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 65%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">CSS</span>
+              <span style="color: #c4b5fd;">65%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 65%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">C++</span>
+              <span style="color: #c4b5fd;">70%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 70%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-weight: 600; color: #ffffff;">Python</span>
+              <span style="color: #c4b5fd;">75%</span>
+            </div>
+            <div style="height: 6px; background-color: #2d2d2d; border-radius: 3px; overflow: hidden;">
+              <div style="height: 100%; width: 75%; background-color: #a78bfa;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Skills Section --> 
+  
+  <!-- ======= Resume Section ======= -->
+  <section id="resume" class="resume" style="background-color: #0d0d0d; color: #e0e0e0; padding: 5rem 0;">
+    <div class="container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 3rem;">
+      <div class="section-title" style="margin-bottom: 3rem;">
+        <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #a78bfa; text-align: left;">Resume</h2>
+        <p style="font-size: 1.125rem; color: #9ca3af; max-width: 100%; margin: 0; line-height: 1.5;">My professional journey and education</p>
+      </div>
+      <div class="row" style="margin: 0 -15px;">
+        <div class="col-lg-6" data-aos="fade-up" style="padding: 0 15px;">
+          <div class="resume-item" style="background-color: #1a1a1a; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3 style="font-size: 1.5rem; font-weight: 600; color: #ffffff; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.75rem;">
+              <span style="position: relative;">Summary</span>
+              <span style="position: absolute; left: 0; bottom: 0; width: 50px; height: 3px; background-color: #a78bfa;"></span>
+            </h3>
+            <div style="margin-bottom: 1.5rem;">
+              <h4 style="font-size: 1.25rem; font-weight: 600; color: #ffffff; margin-bottom: 0.5rem;">Sandeep Tangri</h4>
+              <p style="font-style: italic; color: #d1d5db; margin-bottom: 1rem; line-height: 1.6;">
+                Innovative and deadline-driven 3D Artist with 14 years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.
+              </p>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 0.5rem; color: #d1d5db; display: flex; align-items: center;">
+                  <i class='bx bxs-map' style="color: #a78bfa; margin-right: 0.75rem; font-size: 1.25rem;"></i>
+                  <span>Punjab, INDIA</span>
+                </li>
+                <li style="margin-bottom: 0.5rem; color: #d1d5db; display: flex; align-items: center;">
+                  <i class='bx bxs-phone' style="color: #a78bfa; margin-right: 0.75rem; font-size: 1.25rem;"></i>
+                  <span>+91 9717868495</span>
+                </li>
+                <li style="margin-bottom: 0; color: #d1d5db; display: flex; align-items: center;">
+                  <i class='bx bxs-envelope' style="color: #a78bfa; margin-right: 0.75rem; font-size: 1.25rem;"></i>
+                  <span>sandeeptangri@gmail.com</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="resume-item" style="background-color: #1a1a1a; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3 style="font-size: 1.5rem; font-weight: 600; color: #ffffff; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.75rem;">
+              <span style="position: relative;">Education</span>
+              <span style="position: absolute; left: 0; bottom: 0; width: 50px; height: 3px; background-color: #a78bfa;"></span>
+            </h3>
+            <div style="margin-bottom: 2.5rem; position: relative; padding-left: 1.75rem; border-left: 2px solid #a78bfa;">
+              <h4 style="font-size: 1.25rem; font-weight: 600; color: #ffffff; margin-bottom: 0.5rem;">Diploma in Animation</h4>
+              <div style="background-color: rgba(167, 139, 250, 0.1); display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; margin-bottom: 0.75rem;">
+                <span style="color: #a78bfa; font-size: 0.875rem; font-weight: 500;">2006 - 2007</span>
+              </div>
+              <p style="color: #a78bfa; margin-bottom: 0.75rem; font-style: normal;">
+                <i class='bx bxs-graduation' style="margin-right: 0.5rem;"></i>Frameboxx Animation, Ludhiana, Punjab
+              </p>
+              <p style="color: #d1d5db; line-height: 1.6; margin-bottom: 0;">
+                Completed 1 year diploma in Animation. Worked on live 3D projects, developing skills in 3D modeling, texturing, and rendering.
+              </p>
+            </div>
+            
+            <div style="margin-bottom: 0; position: relative; padding-left: 1.75rem; border-left: 2px solid #a78bfa;">
+              <h4 style="font-size: 1.25rem; font-weight: 600; color: #ffffff; margin-bottom: 0.5rem;">Diploma in Software & Web Development</h4>
+              <div style="background-color: rgba(167, 139, 250, 0.1); display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; margin-bottom: 0.75rem;">
+                <span style="color: #a78bfa; font-size: 0.875rem; font-weight: 500;">2001 - 2003</span>
+              </div>
+              <p style="color: #a78bfa; margin-bottom: 0.75rem; font-style: normal;">
+                <i class='bx bxs-graduation' style="margin-right: 0.5rem;"></i>Software Solutions Integrated Ltd, Ludhiana, Punjab
+              </p>
+              <p style="color: #d1d5db; line-height: 1.6; margin-bottom: 0;">
+                Gained comprehensive knowledge of programming languages, web development, and database systems through this intensive 2-year diploma program.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100" style="padding: 0 15px;">
+          <div class="resume-item" style="background-color: #1a1a1a; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3 style="font-size: 1.5rem; font-weight: 600; color: #ffffff; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.75rem;">
+              <span style="position: relative;">Professional Experience</span>
+              <span style="position: absolute; left: 0; bottom: 0; width: 50px; height: 3px; background-color: #a78bfa;"></span>
+            </h3>
+            
+            <div style="margin-bottom: 2rem; position: relative; padding-left: 1.75rem; border-left: 2px solid #a78bfa;">
+              <h4 style="font-size: 1.25rem; font-weight: 600; color: #ffffff; margin-bottom: 0.5rem;">3D Artist</h4>
+              <div style="background-color: rgba(167, 139, 250, 0.1); display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; margin-bottom: 0.75rem;">
+                <span style="color: #a78bfa; font-size: 0.875rem; font-weight: 500;">2016 - Present</span>
+              </div>
+              <p style="color: #a78bfa; margin-bottom: 0.75rem; font-style: normal;">
+                <i class='bx bxs-building' style="margin-right: 0.5rem;"></i>SGK, Penang, Malaysia
+              </p>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 0.5rem; color: #d1d5db; display: flex; align-items: flex-start;">
+                  <i class='bx bxs-check-circle' style="color: #a78bfa; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                  <span>Collaborated with a professional Branding Designer Team to create appealing 3D renders of various products.</span>
+                </li>
+                <li style="margin-bottom: 0.5rem; color: #d1d5db; display: flex; align-items: flex-start;">
+                  <i class='bx bxs-check-circle' style="color: #a78bfa; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                  <span>Specialized in 3D modeling, material creation, and texturing based on technical drawings and design specifications.</span>
+                </li>
+                <li style="margin-bottom: 0; color: #d1d5db; display: flex; align-items: flex-start;">
+                  <i class='bx bxs-check-circle' style="color: #a78bfa; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                  <span>Contributed to high-profile projects, ensuring photorealistic renders that met client expectations and project requirements.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div style="position: relative; padding-left: 1.75rem; border-left: 2px solid #a78bfa;">
+              <h4 style="font-size: 1.25rem; font-weight: 600; color: #ffffff; margin-bottom: 0.5rem;">3D Artist</h4>
+              <div style="background-color: rgba(167, 139, 250, 0.1); display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; margin-bottom: 0.75rem;">
+                <span style="color: #a78bfa; font-size: 0.875rem; font-weight: 500;">2015 - 2016</span>
+              </div>
+              <p style="color: #a78bfa; margin-bottom: 0.75rem; font-style: normal;">
+                <i class='bx bxs-building' style="margin-right: 0.5rem;"></i>ADI Backoffice, Chandigarh, Punjab
+              </p>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 0.5rem; color: #d1d5db; display: flex; align-items: flex-start;">
+                  <i class='bx bxs-check-circle' style="color: #a78bfa; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                  <span>Developed 3D projects for the medical industry, creating accurate and detailed visualizations of medical equipment and devices.</span>
+                </li>
+                <li style="margin-bottom: 0.5rem; color: #d1d5db; display: flex; align-items: flex-start;">
+                  <i class='bx bxs-check-circle' style="color: #a78bfa; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                  <span>Successfully managed up to 5 concurrent projects while maintaining high-quality standards and meeting tight deadlines.</span>
+                </li>
+                <li style="margin-bottom: 0; color: #d1d5db; display: flex; align-items: flex-start;">
+                  <i class='bx bxs-check-circle' style="color: #a78bfa; margin-right: 0.75rem; font-size: 1rem; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                  <span>Provided expert consultation to clients, recommending optimal 3D rendering approaches and solutions tailored to their specific needs.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Resume Section --> 
+  
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio section-bg" style="background-color: #0d0d0d; color: #e0e0e0; padding: 5rem 0;">
+    <div class="container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 3rem;">
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>&nbsp;</p>
+      </div>
+      <div class="row" data-aos="fade-up">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-filters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-art">Art</li>
+            <li data-filter=".filter-animation">Animation</li>
+            <li data-filter=".filter-architecture">Architecture</li>
+            <li data-filter=".filter-sketching">Sketching</li>
+            <li data-filter=".filter-freelance">Freelance</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100" style="position: relative; height: 4257.88px; margin: 0 -0.75rem;">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Animation/thumb/img_001.jpg" class="img-fluid" alt="Earthlings" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Animation/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Earthlings" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Earthlings</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Animation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Animation/thumb/img_002.jpg" class="img-fluid" alt="Meri Bhains Ko Anda Kyun Mara" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Animation/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Meri Bhains Ko Anda Kyun Mara" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Meri Bhains Ko Anda Kyun Mara</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Animation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Animation/thumb/img_003.jpg" class="img-fluid" alt="Big Bees Junior" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="https://vimeo.com/17021167" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Big Bees Junior" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-play"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Big Bees Junior</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Animation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Animation/thumb/img_004.jpg" class="img-fluid" alt="Meri Bhains Ko Anda Kyun Mara" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Animation/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Meri Bhains Ko Anda Kyun Mara" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Meri Bhains Ko Anda Kyun Mara</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Animation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Animation/thumb/img_005.jpg" class="img-fluid" alt="Little Krishna" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Animation/little_krishna_hd_(big_animation) (240p).mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Little Krishna" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-play"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Little Krishna</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Animation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Animation/thumb/img_006.jpg" class="img-fluid" alt="Big Bees Junior" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Animation/img_006.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Big Bees Junior" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Big Bees Junior</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Animation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Animation/thumb/img_007.jpg" class="img-fluid" alt="Big Bees Junior" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="https://vimeo.com/17021167" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Big Bees Junior" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-play"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Big Bees Junior</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Animation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Animation/thumb/img_008.jpg" class="img-fluid" alt="Freelance Project" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Animation/img_008.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Freelance Project" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Freelance Project</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Animation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Animation/thumb/img_009.jpg" class="img-fluid" alt="Freelance Project" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Animation/img_009.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Freelance Project" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Freelance Project</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Animation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-animation" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Animation/thumb/img_001.jpg" class="img-fluid" alt="Earthlings" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Animation/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Earthlings" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Earthlings</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Animation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Architecture/thumb/img_001.jpg" class="img-fluid" alt="Interior Design" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Architecture/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Interior Design" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Interior Design</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Architecture</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Architecture/thumb/img_002.jpg" class="img-fluid" alt="Exterior Design" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Architecture/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Exterior Design" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Exterior Design</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Architecture</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Architecture/thumb/img_003.jpg" class="img-fluid" alt="Landscape Design" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Architecture/img_003.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Landscape Design" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Landscape Design</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Architecture</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Architecture/thumb/img_004.jpg" class="img-fluid" alt="Interior Design" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Architecture/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Interior Design" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Interior Design</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Architecture</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Architecture/thumb/img_005.jpg" class="img-fluid" alt="Exterior Design" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Architecture/img_005.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Exterior Design" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+              <a href="images/portfolio/Architecture/img_006.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Exterior Visualisation" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Exterior Design</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Architecture</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Architecture/thumb/img_007.jpg" class="img-fluid" alt="Exterior Visualisation" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Architecture/img_007.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Exterior Visualisation" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Exterior Visualisation</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Architecture</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-architecture" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Architecture/thumb/img_008.jpg" class="img-fluid" alt="Kitchen Interior Visualisation" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Architecture/img_008.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Kitchen Interior Visualisation" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Kitchen Interior Visualisation</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Architecture</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-art" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Art/thumb/img_001.jpg" class="img-fluid" alt="Buddha's Hand" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Art/img_001.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Buddha's Hand" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-play"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Buddha's Hand</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Art</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_001.jpg" class="img-fluid" alt="3D Glasses" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Freelance/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Glasses" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Glasses</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_002.jpg" class="img-fluid" alt="3D Glasses" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Freelance/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Glasses" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Glasses</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-art" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Art/thumb/img_003.jpg" class="img-fluid" alt="3D Art" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Art/img_003.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Art" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Art</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Art</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_004.jpg" class="img-fluid" alt="Product 3D" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Freelance/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Product 3D" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Product 3D</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_007.jpg" class="img-fluid" alt="Octopus for Gaming" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Freelance/img_007.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Octopus for Gaming" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Octopus for Gaming</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_002.jpg" class="img-fluid" alt="3D Glasses" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Freelance/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Glasses" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Glasses</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_009.jpg" class="img-fluid" alt="Wedding Rings" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Freelance/img_009.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Wedding Rings" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Wedding Rings</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_010.jpg" class="img-fluid" alt="3D Model" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Freelance/img_010.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Model" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Model</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_011.jpg" class="img-fluid" alt="3D Model" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Freelance/img_011.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Model" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Model</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_012.jpg" class="img-fluid" alt="3D Model" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Freelance/img_012.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D Model" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">3D Model</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-freelance" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Freelance/thumb/img_013.jpg" class="img-fluid" alt="Dracula for Game" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Freelance/img_013.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Dracula for Game" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Dracula for Game</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Freelance</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Sketching/thumb/img_001.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Sketching/img_001.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Sketch</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Sketching</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Sketching/thumb/img_002.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Sketching/img_002.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Sketch</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Sketching</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Sketching/thumb/img_003.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Sketching/img_003.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Sketch</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Sketching</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Sketching/thumb/img_004.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Sketching/img_004.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Sketch</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Sketching</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Sketching/thumb/img_005.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Sketching/img_005.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Sketch</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Sketching</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Sketching/thumb/img_006.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Sketching/img_006.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Sketch</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Sketching</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Sketching/thumb/img_007.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Sketching/img_007.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Sketch</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Sketching</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Sketching/thumb/img_008.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Sketching/img_008.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Sketch</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Sketching</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Sketching/thumb/img_009.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Sketching/img_009.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Sketch</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Sketching</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Sketching/thumb/img_010.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Sketching/img_010.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Sketch</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Sketching</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Sketching/thumb/img_011.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Sketching/img_011.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Sketch</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Sketching</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-sketching" style="padding: 0.75rem;">
+          <div class="portfolio-wrap" style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="images/portfolio/Sketching/thumb/img_012.jpg" class="img-fluid" alt="Sketch" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;">
+            <div class="portfolio-links" style="position: absolute; inset: 0; background: rgba(13, 13, 13, 0.8); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s ease;">
+              <a href="images/portfolio/Sketching/img_012.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sketch" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #a78bfa; border-radius: 50%; color: #0d0d0d; font-size: 1.5rem; margin: 0 0.5rem; transition: all 0.3s ease; transform: translateY(20px);">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <div class="portfolio-info" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 26, 0.9); padding: 1rem; transition: all 0.3s ease;">
+              <h4 style="font-size: 1rem; color: #ffffff; margin: 0; font-weight: 600;">Sketch</h4>
+              <p style="font-size: 0.875rem; color: #9ca3af; margin: 0.25rem 0 0 0;">Sketching</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Portfolio Section --> 
+  
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Reel</h2>
+          <div class="row">
+            <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/17153265?h=e9c4bdcda7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Maya Lighting Demoreel"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+      <!--<div class="row">
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+          <div class="icon"><i class="bi bi-briefcase"></i></div>
+          <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon"><i class="bi bi-card-checklist"></i></div>
+          <h4 class="title"><a href="">Dolor Sitema</a></h4>
+          <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon"><i class="bi bi-bar-chart"></i></div>
+          <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+          <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon"><i class="bi bi-binoculars"></i></div>
+          <h4 class="title"><a href="">Magni Dolores</a></h4>
+          <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon"><i class="bi bi-brightness-high"></i></div>
+          <h4 class="title"><a href="">Nemo Enim</a></h4>
+          <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+        </div>
+        <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+          <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+          <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+          <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+        </div>
+      </div>-->
+    </div>
+  </section>
+      <!--End Services Section--> 
+  
+      <!--Testimonials Section-->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Breakdown</h2>
+        <div style="padding:56.25% 0 0 0;position:relative; padding-bottom: 100px;"><iframe src="https://player.vimeo.com/video/174074282?h=bfc863f9ac&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Sundial Shot Compositing."></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/174074357?h=05d4d70d45&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Eleven Second Shot Compositing."></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
+        </div>
+
+        <!--<div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div>
+              <!--End testimonial item-->
+
+            <!--<div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div>-->
+              
+              <!--End testimonial item-->
+
+            <!--<div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div>-->
+              
+              <!--End testimonial item-->
+
+            <!--<div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div>-->
+              
+              <!--End testimonial item-->
+
+            <!--<div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div>-->
+              <!--End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section --> 
+  
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Please use this contact form or send me an email</p>
+      </div>
+      <div class="row" data-aos="fade-in">
+        <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="info">
+            <div class="address"> <i class="bi bi-geo-alt"></i>
+              <h4>Location:</h4>
+              <p>Kuala Lumpur, MALAYASIA</p>
+            </div>
+            <div class="email"> <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>sandeeptangri@gmail.com </p>
+            </div>
+            <div class="phone"> <i class="bi bi-phone"></i>
+              <h4>Call or Whatsapp:</h4>
+              <p>+91 9717868495</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127482.66722782142!2d101.6169493970083!3d3.138674969062989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49c701efeae7%3A0xf4d98e5b2f1c287d!2sKuala%20Lumpur%2C%20Federal%20Territory%20of%20Kuala%20Lumpur%2C%20Malaysia!5e0!3m2!1sen!2sin!4v1657446358736!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+<!--            <iframe src="images/Slider/sandeepqrnew.png" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>-->
+
+          </div>
+        </div>
+        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+<!-- Your form here -->
+    <form id="contact-form" action="https://formspree.io/f/mvgpjgrd" method="POST" role="form" class="php-email-form">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" class="form-control" id="name" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Your Email</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" name="subject" id="subject" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" name="message" rows="10" required></textarea>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+    </form>
+
+   <!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Success</h5>
+                <!-- Removed close button -->
+            </div>
+            <div class="modal-body">
+                Your message has been sent. Thank you!
+            </div>
+            <!-- Removed footer -->
+        </div>
+    </div>
+</div>
+
+
+   <!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="errorModalLabel">Error</h5>
+                <!-- Removed close button -->
+            </div>
+            <div class="modal-body">
+                There was an error sending your message. Please try again.
+            </div>
+            <!-- Removed footer -->
+        </div>
+    </div>
+</div>
+
+<!-- Your custom JavaScript -->
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    
+    var form = event.target;
+    
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(function(response) {
+        if (response.ok) {
+            $('#successModal').modal('show'); // Show success modal
+            setTimeout(function() {
+                $('#successModal').modal('hide'); // Hide modal after 2 seconds
+            }, 2000);
+            form.reset();
+        } else {
+            $('#errorModal').modal('show'); // Show error modal
+            setTimeout(function() {
+                $('#errorModal').modal('hide'); // Hide modal after 2 seconds
+            }, 2000);
+        }
+    }).catch(function(error) {
+        $('#errorModal').modal('show'); // Show error modal
+        setTimeout(function() {
+            $('#errorModal').modal('hide'); // Hide modal after 2 seconds
+        }, 2000);
+        console.error('Form submission failed:', error);
+    });
+});
+</script>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section --> 
+  
+</main>
+
+<!-- Vendor JS Files --> 
+<script type="text/javascript" src="js/purecounter/purecounter.js"></script> 
+<!--  <script type="text/javascript" src="js/type/typed.min.js"></script>--> 
+<script type="text/javascript" src="js/waypoints/noframework.waypoints.js"></script> 
+<script type="text/javascript" src="js/php-email-form/validate.js"></script> 
+<script type="text/javascript" src="js/glightbox/js/glightbox.min.js"></script> 
+<script type="text/javascript" src="js/typed.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
+<!--<script type="text/javascript" src="js/typed.min.js"></script>--> 
+<script type="text/javascript" src="js/main.js"></script> 
+<script type="text/javascript" src="js/aos.js"></script> 
+<script type="text/javascript" src="js/modernizr.custom.86080.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script type="text/javascript" src="js/isotope-layout/isotope.pkgd.min.js"></script> 
+<script type="text/javascript" src="js/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
