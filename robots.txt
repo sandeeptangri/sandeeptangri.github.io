@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+# Sitemap files
+Sitemap: https://sandeeptangri.github.io/sitemap_index.xml
 Sitemap: https://sandeeptangri.github.io/sitemap.xml
